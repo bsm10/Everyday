@@ -1,30 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.IO;
-using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
 namespace Everyday
 {
     public class Everyday 
     {
-        private const string quote = "\"";
+        public LoginData loginData;
+        public ErrorStatus errStatus;
+        public GetEvents getEvents;
+        public GetUserInfo getUserInfo;
+                
         public string OSVersion = Environment.OSVersion.ToString();
         public string SERVER = "http://api.go.pl.ua/";
         public string ComputerID = "Test for Win8 bsm10";
         public string response;
 
-        public LoginPHP loginData; 
-        public ErrorStatus errStatus;
-        public GetEvents getEvents;
-        public GetUserInfo getUserInfo;
+        private const string quote = "\"";
+        public int SUCCESS;
 
         public Everyday(string sLog, string sPass)
         {
@@ -35,7 +32,7 @@ namespace Everyday
             }
 
         }
-        public int Login(string sLog, string sPass)
+        private int Login(string sLog, string sPass)
         {
             string qry;
             qry = (SERVER
@@ -46,7 +43,7 @@ namespace Everyday
                         + (sPass + "\"}")))));
             if (MakeQueryToServer(qry) == 1)
             {
-                loginData = JsonConvert.DeserializeObject<LoginPHP>(response);
+                loginData = JsonConvert.DeserializeObject<LoginData>(response);
             }
             else return 0;
             qry = SERVER + "GetEvents.php?Token=" + loginData.token
@@ -95,8 +92,8 @@ namespace Everyday
         else {
             request.Method = "GET";
         }
-        request.Proxy = new WebProxy("10.0.0.112", 8080);
-        request.Proxy.Credentials = new NetworkCredential("bmaliy", "123");
+        //request.Proxy = new WebProxy("10.0.0.112", 8080);
+        //request.Proxy.Credentials = new NetworkCredential("bmaliy", "123");
         try {
             response = (HttpWebResponse)request.GetResponse();
             if ((bBitmap == false)) {
@@ -234,7 +231,7 @@ namespace Everyday
         internal int age;
     }
 
-    class ErrorStatus
+        public struct ErrorStatus
         {
         /*Результаты обработки запросов
         Каждый ответ сервера начинается с параметра success, который равняется  «1», если запрос обработан успешно или «0», если возникли какие-либо ошибки. 
@@ -246,7 +243,7 @@ namespace Everyday
             public string error_for_user;
             public string working_time;
         }
-    class LoginPHP
+        public struct LoginData
         {
            public int success;
            public string token;
@@ -255,16 +252,16 @@ namespace Everyday
            public int not_confirmed_events_count;
            public float working_time;
         }
-    class Result
+        public struct Result
         {
             public int success { get; set; }
         }
-    class Items
+        public struct Items
         {
             public string id;
             public string name;
         }
-    class Events
+    public struct Events
         {
             public string event_id;
             public string img;
@@ -278,14 +275,14 @@ namespace Everyday
             public int not_confirmed_events_count;
             public float working_time;
         }
-    class GetEvents
-    {
-        public int success;
-        public string a_day_string;
-        public string a_day_date;
-        public Events[] events;
-    }
-    class AppSettings
+        public struct GetEvents
+        {
+            public int success;
+            public string a_day_string;
+            public string a_day_date;
+            public Events[] events;
+        }
+        public struct AppSettings
         {
             public bool confirm_events; // true,
             public bool enable_report_eating; // true,
@@ -293,7 +290,7 @@ namespace Everyday
             public int cache_period; // 7
         }
 
-    class GetUserInfo
+        public struct GetUserInfo
         {
             public int success;
             public string UserId;
@@ -307,6 +304,6 @@ namespace Everyday
             public int not_confirmed_events_count; // 12,          
             public int new_notifications_count; // 5,
             public float working_time; // 0.002
-            }
-        }
+       }
+    }
 }
