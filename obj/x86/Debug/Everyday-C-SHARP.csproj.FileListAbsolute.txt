@@ -1,0 +1,25 @@
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\obj\x86\Debug\Everyday.Properties.Resources.resources
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\bin\Debug\Everyday-C-SHARP.exe
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\bin\Debug\Everyday-C-SHARP.pdb
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\obj\x86\Debug\Everyday-C-SHARP.exe
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\obj\x86\Debug\Everyday-C-SHARP.pdb
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\obj\x86\Debug\Everyday.frmLogin.resources
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\obj\x86\Debug\Everyday.frmMain.resources
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\bin\Debug\Newtonsoft.Json.dll
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\bin\Debug\Newtonsoft.Json.pdb
+C:\Documents and Settings\Sprava.COMP1\мои документы\visual studio 2010\Projects\Everyday-C-SHARP\Everyday-C-SHARP\bin\Debug\Newtonsoft.Json.xml
+D:\Proj\Everyday-C-SHARP\obj\x86\Debug\Everyday-C-SHARP.exe
+D:\Proj\Everyday-C-SHARP\obj\x86\Debug\Everyday-C-SHARP.pdb
+D:\Proj\Everyday-C-SHARP\bin\Debug\Everyday-C-SHARP.exe
+D:\Proj\Everyday-C-SHARP\bin\Debug\Everyday-C-SHARP.pdb
+D:\Proj\Everyday-C-SHARP\bin\Debug\Newtonsoft.Json.pdb
+D:\Proj\Everyday-C-SHARP\bin\Debug\Newtonsoft.Json.xml
+D:\Proj\Everyday-C-SHARP\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Proj\Everyday-C-SHARP\obj\x86\Debug\Everyday.frmLogin.resources
+D:\Proj\Everyday-C-SHARP\obj\x86\Debug\Everyday.frmMain.resources
+D:\Proj\Everyday-C-SHARP\obj\x86\Debug\Everyday.Properties.Resources.resources
+D:\Proj\Everyday-C-SHARP\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Proj\Everyday-C-SHARP\obj\x86\Debug\GenerateResource.write.1.tlog
