@@ -15,21 +15,20 @@ namespace Everyday
 {
     public class Everyday 
     {
-        const string quote = "\"";
-        private string OSVersion = Environment.OSVersion.ToString();
-        string SERVER = "http://api.go.pl.ua/";
-        public string ComputerID;
-        public int Success;
-        string response;
+        private const string quote = "\"";
+        public string OSVersion = Environment.OSVersion.ToString();
+        public string SERVER = "http://api.go.pl.ua/";
+        public string ComputerID = "Test for Win8 bsm10";
+        public string response;
 
-        LoginPHP loginData = new LoginPHP();
-        ErrorStatus errSt = new ErrorStatus();
-        GetEvents ev;
-        GetUserInfo gui;
+        public LoginPHP loginData; 
+        public ErrorStatus errStatus;
+        public GetEvents getEvents;
+        public GetUserInfo getUserInfo;
 
         public Everyday(string sLog, string sPass)
         {
-            ComputerID="Test for Win8 bsm10";
+            
             if (Login(sLog, sPass)==0)
             {
                 
@@ -56,7 +55,7 @@ namespace Everyday
                          + "&Query={" + quote + "aday" + quote + ":" + quote + "2014-08-20" + quote + "}";
             if (MakeQueryToServer(qry)==1)
             {
-                ev = JsonConvert.DeserializeObject<GetEvents>(response);
+                getEvents = JsonConvert.DeserializeObject<GetEvents>(response);
             }
             else return 0;
             qry = SERVER + "GetUserInfo.php?Token=" + loginData.token 
@@ -65,7 +64,7 @@ namespace Everyday
                          + OSVersion.ToString() + "&Query={}";
             if (MakeQueryToServer(qry) == 1)
             {
-                gui = JsonConvert.DeserializeObject<GetUserInfo>(response);
+                getUserInfo = JsonConvert.DeserializeObject<GetUserInfo>(response);
             }
             else return 0;
             //LoadTree(response, TreeView1);
@@ -80,8 +79,8 @@ namespace Everyday
             res = JsonConvert.DeserializeObject<Result>(response);
             if (res.success == 0)
             {
-                errSt = JsonConvert.DeserializeObject<ErrorStatus>(response);
-                MessageBox.Show(errSt.error_for_user);
+                errStatus = JsonConvert.DeserializeObject<ErrorStatus>(response);
+                MessageBox.Show(errStatus.error_for_user);
             }
             return res.success;
         }
@@ -229,71 +228,56 @@ namespace Everyday
         
         return "NoData";
     }
-
-
     class Person
     {
         internal string name;
         internal int age;
     }
 
-    [DataContract]
     class ErrorStatus
         {
         /*Результаты обработки запросов
         Каждый ответ сервера начинается с параметра success, который равняется  «1», если запрос обработан успешно или «0», если возникли какие-либо ошибки. 
         Остальные параметры ответов и их структура  различаются в зависимости от запроса.
         В случае возникновения ошибки (success=0) скрипты возвращают ее код (параметр error_code), а также 2 варианта текстового представления. Один вариант расшифровывает ошибку для разработчика (параметр error_description). 2-й вариант – error_for_user (общая фраза + код ошибки) служит для вывода (при необходимости) пользователю устройства. По своей сути error_for_user – это фраза обобщающая группу однородных ошибок.*/
-            [DataMember]
-            internal int success;
-            [DataMember]
-            internal string error_code;
-            [DataMember]
-            internal string error_description;
-            [DataMember]
-            internal string error_for_user;
-            [DataMember]
-            internal string working_time;
+            public int success;
+            public string error_code;
+            public string error_description;
+            public string error_for_user;
+            public string working_time;
         }
-    [DataContract]
     class LoginPHP
-    {
-       [DataMember]
-       internal int success;
-       [DataMember]
-       internal string token;
-       [DataMember]
-       internal string client_id;
-       [DataMember]
-       internal int new_notifications_count;
-       [DataMember]
-       internal int not_confirmed_events_count;
-       [DataMember]
-       internal float working_time;
-    }
+        {
+           public int success;
+           public string token;
+           public string client_id;
+           public int new_notifications_count;
+           public int not_confirmed_events_count;
+           public float working_time;
+        }
     class Result
-    {
-        public int success { get; set; }
-    }
+        {
+            public int success { get; set; }
+        }
     class Items
-    {
-        public string id;
-        public string name;
-    }
+        {
+            public string id;
+            public string name;
+        }
     class Events
-    {
-        public string event_id;
-        public string img;
-        public string time;
-        public string expert;
-        public string caption;
-        public int confirmed;
-        public int items_count;
-        public Items[] items;
-        public int a_day_events_count;
-        public int not_confirmed_events_count;
-        public float working_time;
-    }
+        {
+            public string event_id;
+            public string img;
+            public string time;
+            public string expert;
+            public string caption;
+            public int confirmed;
+            public int items_count;
+            public Items[] items;
+            public int a_day_events_count;
+            public int not_confirmed_events_count;
+            public float working_time;
+        }
     class GetEvents
     {
         public int success;
@@ -302,27 +286,27 @@ namespace Everyday
         public Events[] events;
     }
     class AppSettings
-    {
-        public bool confirm_events; // true,
-        public bool enable_report_eating; // true,
-        public bool enable_report_preparats; // true,
-        public int cache_period; // 7
-    }
+        {
+            public bool confirm_events; // true,
+            public bool enable_report_eating; // true,
+            public bool enable_report_preparats; // true,
+            public int cache_period; // 7
+        }
 
     class GetUserInfo
-    {
-        public int success;
-        public string UserId;
-        public string UserLogin; // "elchukov",
-        public string UserImg; //"avatars/1.png",
-        public string UserF; //"Ельчуков",
-        public string UserI; // "Сергей",
-        public string UserO; // "Викторович",
-        public string UserDateReg; //"2014-06-23 14:37:46",
-        public AppSettings Settings;           
-        public int not_confirmed_events_count; // 12,          
-        public int new_notifications_count; // 5,
-        public float working_time; // 0.002
+        {
+            public int success;
+            public string UserId;
+            public string UserLogin; // "elchukov",
+            public string UserImg; //"avatars/1.png",
+            public string UserF; //"Ельчуков",
+            public string UserI; // "Сергей",
+            public string UserO; // "Викторович",
+            public string UserDateReg; //"2014-06-23 14:37:46",
+            public AppSettings Settings;           
+            public int not_confirmed_events_count; // 12,          
+            public int new_notifications_count; // 5,
+            public float working_time; // 0.002
+            }
         }
-    }
 }

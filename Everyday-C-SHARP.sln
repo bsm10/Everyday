@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Everyday-C-SHARP", "Everyday-C-SHARP\Everyday-C-SHARP.csproj", "{48A3E778-CB1C-46A9-80D9-C2FD40B941AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Everyday-C-SHARP", "Everyday-C-SHARP.csproj", "{48A3E778-CB1C-46A9-80D9-C2FD40B941AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
