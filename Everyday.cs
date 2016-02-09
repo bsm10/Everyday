@@ -26,12 +26,9 @@ namespace Everyday
 
         public Everyday(string sLog, string sPass)
         {
-            
             if (Login(sLog, sPass)==0)
             {
-                
             }
-
         }
         private int Login(string sLog, string sPass)
         {
@@ -47,15 +44,6 @@ namespace Everyday
                 loginData = JsonConvert.DeserializeObject<LoginData>(response);
             }
             else return 0;
-            qry = SERVER + "GetEvents.php?Token=" + loginData.token
-                         + "&Devid=" + ComputerID
-                         + "&Platform=" + OSVersion.ToString()
-                         + "&Query={" + quote + "aday" + quote + ":" + quote + "2014-08-20" + quote + "}";
-            if (MakeQueryToServer(qry)==1)
-            {
-                getEvents = JsonConvert.DeserializeObject<GetEvents>(response);
-            }
-            else return 0;
             qry = SERVER + "GetUserInfo.php?Token=" + loginData.token 
                          + "&Devid=" + ComputerID 
                          + "&Platform=" 
@@ -67,13 +55,23 @@ namespace Everyday
             else return 0;
 
             UserImg =(Bitmap) GetResponse(getUserInfo.UserImg, true);
-            //LoadTree(response, TreeView1);
-            //treeView1.Focus();
             SUCCESS=1;
             return 1;
         }
+    public GetEvents GetEventsByData(string date)
+    {
+        string qry = SERVER + "GetEvents.php?Token=" + loginData.token
+                     + "&Devid=" + ComputerID
+                     + "&Platform=" + OSVersion.ToString()
+                     + "&Query={" + quote + "aday" + quote + ":" + quote + "2014-08-20" + quote + "}";
+        if (MakeQueryToServer(qry) == 1)
+        {
+            getEvents = JsonConvert.DeserializeObject<GetEvents>(response);
+        }
+        return getEvents;
+    }
 
-        private int MakeQueryToServer(string qry)
+    private int MakeQueryToServer(string qry)
         {
         Result res;
             response = (string)GetResponse(qry);
@@ -85,7 +83,6 @@ namespace Everyday
             }
             return res.success;
         }
-
     private object GetResponse(string QueryPHP, bool bBitmap=false) {
         HttpWebRequest request;
         HttpWebResponse response;
@@ -121,99 +118,6 @@ namespace Everyday
         }
         
     }
-    
-    //public void LoadTree(string sResponse, TreeView TrV) {
-    //    TrV.BeginUpdate();
-    //    TrV.Nodes.Clear();
-    //    string[] arr = sResponse.Split(new Char[] { ","c });
-    //    int level = 0;
-    //    level = 0;
-
-    //    for (int i = 0; (i <= UBound(arr)); i++)
-    //    {
-    //        TreeNode Node = new TreeNode();
-    //        string s;
-    //        if ((((arr[i].IndexOf("{") + 1) 
-    //                    > 0) 
-    //                    && ((arr[i].IndexOf("[") + 1) 
-    //                    == 0))) {
-    //            if ((TrV.SelectedNode == null)) {
-    //                Node.Text = arr[i].Replace("{"c, ""c).Replace('\"', "");
-    //                TrV.Nodes.Add(Node);
-    //                TrV.SelectedNode = Node;
-    //            }
-    //            else {
-    //                s = arr[i].Substring((arr[i].IndexOf("{") + 1)).Replace('\"', "");
-    //                Node.Text = s;
-    //                TrV.SelectedNode.Nodes.Add(Node);
-    //                TrV.SelectedNode = Node;
-    //            }
-                
-    //            level = (level + 1);
-    //        }
-    //        else if ((((arr[i].IndexOf("{") + 1) 
-    //                    > 0) 
-    //                    && ((arr[i].IndexOf("[") + 1) 
-    //                    > 0))) {
-    //            TreeNode NodeChild = new TreeNode();
-    //            Node.Text = arr[i].Substring(0, ((arr[i].IndexOf("[") + 1) 
-    //                            - 2)).Replace('\"', "");
-    //            TrV.SelectedNode.Nodes.Add(Node);
-    //            TrV.SelectedNode = Node;
-    //            s = arr[i].Substring((arr[i].IndexOf("{") + 1)).Replace('\"', "");
-    //            NodeChild.Text = s;
-    //            TrV.SelectedNode.Nodes.Add(NodeChild);
-    //            TrV.SelectedNode = NodeChild;
-    //        }
-    //        else if ((((arr[i].IndexOf("}") + 1) 
-    //                    > 0) 
-    //                    && ((arr[i].IndexOf("]") + 1) 
-    //                    > 0))) {
-    //            s = arr[i].Substring(0, ((arr[i].IndexOf("}") + 1) 
-    //                            - 1)).Trim("\"");
-    //            Node.Text = s;
-    //            TrV.SelectedNode.Nodes.Add(Node);
-    //            if (((TrV.SelectedNode.Parent == null) 
-    //                        == false)) {
-    //                TrV.SelectedNode = TrV.SelectedNode.Parent;
-    //                TrV.SelectedNode = TrV.SelectedNode.Parent;
-    //            }
-                
-    //        }
-    //        else if (((arr[i].IndexOf("}") + 1) 
-    //                    > 0)) {
-    //            s = arr[i].Substring(0, ((arr[i].IndexOf("}") + 1) 
-    //                            - 1)).Trim("\"");
-    //            Node.Text = s;
-    //            TrV.SelectedNode.Nodes.Add(Node);
-    //            if (((TrV.SelectedNode.Parent == null) 
-    //                        == false)) {
-    //                TrV.SelectedNode = TrV.SelectedNode.Parent;
-    //            }
-                
-    //            level = (level - 1);
-    //        }
-    //        else if ((level != 0)) {
-    //            if ((TrV.SelectedNode == null)) {
-    //                Node.Text = arr[i].Replace('\"', "");
-    //                TrV.Nodes.Add(arr[i].Replace('\"', ""));
-    //                TrV.SelectedNode = Node;
-    //            }
-    //            else {
-    //                TrV.SelectedNode.Nodes.Add(arr[i].Replace('\"', ""));
-    //            }
-                
-    //        }
-    //        else {
-    //            TrV.Nodes.Add(arr[i].Replace('\"', ""));
-    //        }
-            
-    //    }
-        
-    //    TrV.CollapseAll();
-    //    TrV.Nodes[0].Expand();
-    //    TrV.EndUpdate();
-    //}
     private string GetDataFromString(string sParametr, string StringResponse)
     {
         int i;
@@ -226,15 +130,8 @@ namespace Everyday
             return StringResponse.Substring(j, (k 
                             - (j - 1))).Trim('\"');
         }
-        
         return "NoData";
     }
-    class Person
-    {
-        internal string name;
-        internal int age;
-    }
-
         public struct ErrorStatus
         {
         /*Результаты обработки запросов
@@ -256,16 +153,16 @@ namespace Everyday
            public int not_confirmed_events_count;
            public float working_time;
         }
-        public struct Result
+        private struct Result
         {
             public int success { get; set; }
         }
-        public struct Items
+        private struct Items
         {
             public string id;
             public string name;
         }
-    public struct Events
+        private struct Events
         {
             public string event_id;
             public string img;
@@ -293,7 +190,6 @@ namespace Everyday
             public bool enable_report_preparats; // true,
             public int cache_period; // 7
         }
-
         public struct GetUserInfo
         {
             public int success;

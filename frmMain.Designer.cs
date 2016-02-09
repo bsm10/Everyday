@@ -30,35 +30,50 @@
         {
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.pbxKlient = new System.Windows.Forms.PictureBox();
+            this.txtUserInfo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxKlient)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(187, 3);
+            this.treeView1.Location = new System.Drawing.Point(86, 87);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(233, 312);
+            this.treeView1.Size = new System.Drawing.Size(233, 228);
             this.treeView1.TabIndex = 0;
             // 
             // pbxKlient
             // 
-            this.pbxKlient.Location = new System.Drawing.Point(12, 3);
+            this.pbxKlient.Location = new System.Drawing.Point(3, 3);
             this.pbxKlient.Name = "pbxKlient";
-            this.pbxKlient.Size = new System.Drawing.Size(169, 149);
+            this.pbxKlient.Size = new System.Drawing.Size(68, 67);
+            this.pbxKlient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxKlient.TabIndex = 1;
             this.pbxKlient.TabStop = false;
+            // 
+            // txtUserInfo
+            // 
+            this.txtUserInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.txtUserInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUserInfo.Location = new System.Drawing.Point(86, 3);
+            this.txtUserInfo.Multiline = true;
+            this.txtUserInfo.Name = "txtUserInfo";
+            this.txtUserInfo.ReadOnly = true;
+            this.txtUserInfo.Size = new System.Drawing.Size(233, 78);
+            this.txtUserInfo.TabIndex = 2;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 318);
+            this.ClientSize = new System.Drawing.Size(322, 317);
+            this.Controls.Add(this.txtUserInfo);
             this.Controls.Add(this.pbxKlient);
             this.Controls.Add(this.treeView1);
             this.Name = "frmMain";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbxKlient)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -66,6 +81,7 @@
 
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.PictureBox pbxKlient;
+        private System.Windows.Forms.TextBox txtUserInfo;
     }
 }
 
