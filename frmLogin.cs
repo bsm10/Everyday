@@ -27,9 +27,9 @@ namespace Everyday
             {
                 Everyday everyday = new Everyday(UsernameTextBox.Text,PasswordTextBox.Text);
 
-                if (everyday.errStatus.success == 1)
+                if (everyday.SUCCESS == 1)
                 {
-                    frmMain f = new frmMain();
+                    frmMain f = new frmMain(everyday);
                     f.Show();
                 }
             }

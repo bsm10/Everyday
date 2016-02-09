@@ -19,6 +19,7 @@ namespace Everyday
         public string SERVER = "http://api.go.pl.ua/";
         public string ComputerID = "Test for Win8 bsm10";
         public string response;
+        public Bitmap UserImg;
 
         private const string quote = "\"";
         public int SUCCESS;
@@ -64,8 +65,11 @@ namespace Everyday
                 getUserInfo = JsonConvert.DeserializeObject<GetUserInfo>(response);
             }
             else return 0;
+
+            UserImg =(Bitmap) GetResponse(getUserInfo.UserImg, true);
             //LoadTree(response, TreeView1);
             //treeView1.Focus();
+            SUCCESS=1;
             return 1;
         }
 
@@ -92,8 +96,8 @@ namespace Everyday
         else {
             request.Method = "GET";
         }
-        //request.Proxy = new WebProxy("10.0.0.112", 8080);
-        //request.Proxy.Credentials = new NetworkCredential("bmaliy", "123");
+        request.Proxy = new WebProxy("10.0.0.112", 8080);
+        request.Proxy.Credentials = new NetworkCredential("bmaliy", "123");
         try {
             response = (HttpWebResponse)request.GetResponse();
             if ((bBitmap == false)) {
