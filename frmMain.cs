@@ -18,7 +18,11 @@ namespace Everyday
             txtUserInfo.Text = everyday.getUserInfo.UserF + "\r\n" + everyday.getUserInfo.UserI +
                                "\r\n" + everyday.getUserInfo.UserO + "\r\nДата регистрации: " + everyday.getUserInfo.UserDateReg;
 
-            everyday.GetEventsByData(monthCalendar1.TodayDate.ToString("yyyy-MM-dd"));
+            GetEvents events = everyday.GetEventsByData(monthCalendar1.TodayDate.ToString("yyyy-MM-dd"));
+            
+
+
+
 
             LoadTree(everyday,treeView1);
         }
