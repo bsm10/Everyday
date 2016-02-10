@@ -58,12 +58,12 @@ namespace Everyday
             SUCCESS=1;
             return 1;
         }
-    public GetEvents GetEventsByData(string date)
+        public GetEvents GetEventsByData(string date) //date format "2014-08-20"
     {
         string qry = SERVER + "GetEvents.php?Token=" + loginData.token
                      + "&Devid=" + ComputerID
                      + "&Platform=" + OSVersion.ToString()
-                     + "&Query={" + quote + "aday" + quote + ":" + quote + "2014-08-20" + quote + "}";
+                     + "&Query={" + quote + "aday" + quote + ":" + quote + date + quote + "}";
         if (MakeQueryToServer(qry) == 1)
         {
             getEvents = JsonConvert.DeserializeObject<GetEvents>(response);
@@ -157,12 +157,12 @@ namespace Everyday
         {
             public int success { get; set; }
         }
-        private struct Items
+        public struct Items
         {
             public string id;
             public string name;
         }
-        private struct Events
+        public struct Events
         {
             public string event_id;
             public string img;

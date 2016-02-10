@@ -31,14 +31,15 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.pbxKlient = new System.Windows.Forms.PictureBox();
             this.txtUserInfo = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.pbxKlient)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(86, 87);
+            this.treeView1.Location = new System.Drawing.Point(172, 74);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(233, 228);
+            this.treeView1.Size = new System.Drawing.Size(147, 155);
             this.treeView1.TabIndex = 0;
             // 
             // pbxKlient
@@ -58,14 +59,21 @@
             this.txtUserInfo.Multiline = true;
             this.txtUserInfo.Name = "txtUserInfo";
             this.txtUserInfo.ReadOnly = true;
-            this.txtUserInfo.Size = new System.Drawing.Size(233, 78);
+            this.txtUserInfo.Size = new System.Drawing.Size(233, 67);
             this.txtUserInfo.TabIndex = 2;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(3, 74);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 3;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 317);
+            this.ClientSize = new System.Drawing.Size(322, 235);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.txtUserInfo);
             this.Controls.Add(this.pbxKlient);
             this.Controls.Add(this.treeView1);
@@ -82,6 +90,7 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.PictureBox pbxKlient;
         private System.Windows.Forms.TextBox txtUserInfo;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
 

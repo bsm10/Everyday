@@ -17,7 +17,8 @@ namespace Everyday
             pbxKlient.Image = everyday.UserImg;
             txtUserInfo.Text = everyday.getUserInfo.UserF + "\r\n" + everyday.getUserInfo.UserI +
                                "\r\n" + everyday.getUserInfo.UserO + "\r\nДата регистрации: " + everyday.getUserInfo.UserDateReg;
-            //everyday.getEvents.a_day_date
+
+            everyday.GetEventsByData(monthCalendar1.TodayDate.ToString("yyyy-MM-dd"));
 
             LoadTree(everyday,treeView1);
         }
