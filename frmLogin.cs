@@ -31,6 +31,7 @@ namespace Everyday
                 {
                     frmMain f = new frmMain(everyday);
                     f.Show();
+                    this.Hide();
                 }
             }
 
