@@ -51,6 +51,9 @@ namespace Everyday
 
          private void FillData(GetEvents events)
          {
+             ImageList imageListSmall = new ImageList();
+             ImageList imageListLarge = new ImageList();
+
              listView1.Clear();
              listView1.Columns.Add("Мероприятия", 130, HorizontalAlignment.Left);
              listView1.Columns.Add("Продукты", 200, HorizontalAlignment.Left);
@@ -58,6 +61,10 @@ namespace Everyday
              {
                  ListViewItem item = new ListViewItem(ev.caption.ToString(), 0);
                  item.Checked = ev.confirmed == 1 ? true : false;
+
+                 Bitmap bmp = eday.GetResponse(eday.SERVER_IMG + ev.img, true) as Bitmap;
+                 if (bmp != null) imageListSmall.Images.Add(bmp);
+                 
                  ListViewItem.ListViewSubItemCollection lvi = new ListViewItem.ListViewSubItemCollection(item);
                  foreach (Items it in ev.items)
                  {
@@ -66,16 +73,15 @@ namespace Everyday
                    
                  listView1.Items.AddRange(new ListViewItem[] { item });
              }
-             ImageList imageListSmall = new ImageList();
-             ImageList imageListLarge = new ImageList();
              //Initialize the ImageList objects with bitmaps.
-             imageListSmall.Images.Add(pbxKlient.Image);//Bitmap.FromFile("C:\\MySmallImage1.bmp"));
-             imageListSmall.Images.Add(pbxKlient.Image);//Bitmap.FromFile("C:\\MySmallImage2.bmp"));
-             imageListLarge.Images.Add(pbxKlient.Image);//Bitmap.FromFile("C:\\MyLargeImage1.bmp"));
-             imageListLarge.Images.Add(pbxKlient.Image);//Bitmap.FromFile("C:\\MyLargeImage2.bmp"));
+             //imageListSmall.Images.Add(pbxKlient.Image);//Bitmap.FromFile("C:\\MySmallImage1.bmp"));
+             //imageListSmall.Images.Add(pbxKlient.Image);//Bitmap.FromFile("C:\\MySmallImage2.bmp"));
+             //imageListLarge.Images.Add(pbxKlient.Image);//Bitmap.FromFile("C:\\MyLargeImage1.bmp"));
+             //imageListLarge.Images.Add(pbxKlient.Image);//Bitmap.FromFile("C:\\MyLargeImage2.bmp"));
 
              //Assign the ImageList objects to the ListView.
-             listView1.LargeImageList = imageListLarge;
+             //listView1.LargeImageList = imageListLarge;
+             //listView1.SmallImageList = imageListSmall;
              listView1.SmallImageList = imageListSmall;
          }
 

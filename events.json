@@ -1,0 +1,253 @@
+{
+  "success": 1,
+  "a_day_string": "26 \u042f\u043d\u0432\u0430\u0440\u044f 2016",
+  "a_day_date": 1453759200,
+  "events": [
+    {
+      "event_id": 62200,
+      "img": "events\/1.png",
+      "time": "00:17",
+      "time_to_sort": 1456697820,
+      "expert": "Android App",
+      "caption": "\u041d\u0435\u0437\u0430\u043f\u043b\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u043f\u0440\u0438\u0435\u043c",
+      "event_name_id": 33,
+      "unscheduled": true,
+      "class": 1,
+      "items_count": "1",
+      "items": [
+        {
+          "id": "0",
+          "name": "\u0448\u043e\u043a\u043e\u043b\u0430\u0434"
+        }
+      ],
+      "confirmed": 1
+    },
+    {
+      "event_id": 55098,
+      "img": "events\/1.png",
+      "time": "07:00",
+      "time_to_sort": 1456722000,
+      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
+      "caption": "\u041d\u0430\u0442\u043e\u0449\u0430\u043a",
+      "event_name_id": 8,
+      "unscheduled": false,
+      "class": 1,
+      "items_count": "1",
+      "items": [
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "1291",
+          "name": "\u0412\u043e\u0434\u0430 \u043e\u0447\u0438\u0449\u0435\u043d\u043d\u0430\u044f (300)"
+        }
+      ],
+      "confirmed": 1
+    },
+    {
+      "event_id": 55099,
+      "img": "events\/1.png",
+      "time": "09:00",
+      "time_to_sort": 1456729200,
+      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
+      "caption": "\u0417\u0430\u0432\u0442\u0440\u0430\u043a",
+      "event_name_id": 1,
+      "unscheduled": false,
+      "class": 1,
+      "items_count": "1",
+      "items": [
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "1327",
+          "name": "\u0422\u044b\u043a\u0432\u0435\u043d\u043d\u0430\u044f \u043a\u0430\u0448\u0430 \u0441 \u0438\u0437\u044e\u043c\u043e\u043c (330)"
+        }
+      ],
+      "confirmed": 1
+    },
+    {
+      "event_id": 57651,
+      "img": "events\/2.png",
+      "time": "09:00",
+      "time_to_sort": 1456729200,
+      "expert": "\u0421\u0435\u0440\u0433\u0435\u0439 \u0415\u043b\u044c\u0447\u0443\u043a\u043e\u0432",
+      "caption": "\u041f\u0440\u0435\u043f\u0430\u0440\u0430\u0442\u044b",
+      "event_name_id": 102,
+      "unscheduled": false,
+      "class": 2,
+      "items_count": "1",
+      "items": [
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "27",
+          "name": "\u042f\u043d\u0442\u0430\u0440\u043d\u0430\u044f \u0424\u043e\u0440\u043c\u0443\u043b\u0430 (1 \u0442\u0430\u0431)"
+        }
+      ],
+      "confirmed": 1
+    },
+    {
+      "event_id": 55100,
+      "img": "events\/1.png",
+      "time": "11:00",
+      "time_to_sort": 1456736400,
+      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
+      "caption": "\u0412\u0442\u043e\u0440\u043e\u0439 \u0437\u0430\u0432\u0442\u0440\u0430\u043a",
+      "event_name_id": 2,
+      "unscheduled": false,
+      "class": 1,
+      "items_count": "1",
+      "items": [
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "16946",
+          "name": "\u0424\u0440\u0443\u043a\u0442\u044b, \u0441\u043c\u0435\u0441\u044c, (\u0447\u0435\u0440\u043d\u043e\u0441\u043b\u0438\u0432, \u0430\u0431\u0440\u0438\u043a\u043e\u0441 \u0438 \u0433\u0440\u0443\u0448\u0430), \u0441\u0443\u0445\u0430\u044f\n\u0424\u0440\u0443\u043a\u0442\u044b \u043f\u043e \u0441\u0435\u0437\u043e\u043d\u0443 (250)"
+        }
+      ],
+      "confirmed": 1
+    },
+    {
+      "event_id": 55101,
+      "img": "events\/1.png",
+      "time": "13:00",
+      "time_to_sort": 1456743600,
+      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
+      "caption": "\u041e\u0431\u0435\u0434",
+      "event_name_id": 3,
+      "unscheduled": false,
+      "class": 1,
+      "items_count": "3",
+      "items": [
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "1324",
+          "name": "\u041a\u0430\u0440\u0442\u043e\u0444\u0435\u043b\u044c\u043d\u043e\u0435 \u043f\u044e\u0440\u0435 (170)"
+        },
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "1188",
+          "name": "\u0421\u0430\u043b\u0430\u0442 \u0438\u0437 \u043a\u0430\u043f\u0443\u0441\u0442\u044b \u0438 \u0441\u043b\u0430\u0434\u043a\u043e\u0433\u043e \u043f\u0435\u0440\u0446\u0430 (160)"
+        },
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "1351",
+          "name": "\u041f\u043e\u0441\u0442\u043d\u044b\u0439 \u0434\u0438\u0435\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0431\u043e\u0440\u0449 (240)"
+        }
+      ],
+      "confirmed": 1
+    },
+    {
+      "event_id": 55102,
+      "img": "events\/1.png",
+      "time": "16:00",
+      "time_to_sort": 1456754400,
+      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
+      "caption": "\u041f\u043e\u043b\u0434\u043d\u0438\u043a",
+      "event_name_id": 4,
+      "unscheduled": false,
+      "class": 1,
+      "items_count": "1",
+      "items": [
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "16946",
+          "name": "\u0424\u0440\u0443\u043a\u0442\u044b, \u0441\u043c\u0435\u0441\u044c, (\u0447\u0435\u0440\u043d\u043e\u0441\u043b\u0438\u0432, \u0430\u0431\u0440\u0438\u043a\u043e\u0441 \u0438 \u0433\u0440\u0443\u0448\u0430), \u0441\u0443\u0445\u0430\u044f\n\u0424\u0440\u0443\u043a\u0442\u044b \u043f\u043e \u0441\u0435\u0437\u043e\u043d\u0443 (250)"
+        }
+      ],
+      "confirmed": 1
+    },
+    {
+      "event_id": 55103,
+      "img": "events\/1.png",
+      "time": "19:00",
+      "time_to_sort": 1456765200,
+      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
+      "caption": "\u0423\u0436\u0438\u043d",
+      "event_name_id": 6,
+      "unscheduled": false,
+      "class": 1,
+      "items_count": "3",
+      "items": [
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "121",
+          "name": "\u0422\u0432\u043e\u0440\u043e\u0436\u043d\u0430\u044f \u0437\u0430\u043f\u0435\u043a\u0430\u043d\u043a\u0430 \u0441 \u0438\u0437\u044e\u043c\u043e\u043c (320)"
+        },
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "173",
+          "name": "\u042f\u0431\u043b\u043e\u043a\u043e \u043f\u0435\u0447\u0435\u043d\u043e\u0435 \u0441 \u043c\u0435\u0434\u043e\u043c \u0438 \u043a\u043e\u0440\u0438\u0446\u0435\u0439 (160)"
+        },
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "173",
+          "name": "\u042f\u0431\u043b\u043e\u043a\u043e \u043f\u0435\u0447\u0435\u043d\u043e\u0435 \u0441 \u043c\u0435\u0434\u043e\u043c \u0438 \u043a\u043e\u0440\u0438\u0446\u0435\u0439 (160)"
+        }
+      ],
+      "confirmed": 1
+    },
+    {
+      "event_id": 55104,
+      "img": "events\/1.png",
+      "time": "21:00",
+      "time_to_sort": 1456772400,
+      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
+      "caption": "\u041f\u043e\u0437\u0434\u043d\u0438\u0439 \u0443\u0436\u0438\u043d",
+      "event_name_id": 7,
+      "unscheduled": false,
+      "class": 1,
+      "items_count": "1",
+      "items": [
+        {
+          "0": "GetEvents",
+          "1": "php",
+          "id": "16507",
+          "name": "\u041a\u0430\u0440\u043f, \u0440\u044b\u0431\u0430\n\u0422\u043e\u043b\u0441\u0442\u043e\u043b\u043e\u0431\u0438\u043a \u0431\u0435\u043b\u044b\u0439 \u0441\u0432\u0435\u0436\u0438\u0439 (200)"
+        }
+      ],
+      "confirmed": 1
+    }
+  ],
+  "a_day_events_count": 9,
+  "DevMode": true,
+  "result": {
+    "errors": [
+      
+    ],
+    "warnings": [
+      {
+        "code": 50,
+        "caption": "\u041c\u0435\u0442\u043e\u0434 \u0432\u0435\u0440\u043d\u0443\u043b \u043f\u0443\u0441\u0442\u043e\u0439 \u043c\u0430\u0441\u0441\u0438\u0432",
+        "details": "getTasksList"
+      }
+    ],
+    "notifies": [
+      
+    ]
+  },
+  "debug": {
+    "client_id": "1",
+    "runtime": 0.0356,
+    "script": "GetEvents",
+    "queries": 18,
+    "messages": {
+      "errors": [
+        
+      ],
+      "warnings": [
+        "50|\u041c\u0435\u0442\u043e\u0434 \u0432\u0435\u0440\u043d\u0443\u043b \u043f\u0443\u0441\u0442\u043e\u0439 \u043c\u0430\u0441\u0441\u0438\u0432|getTasksList"
+      ],
+      "notifies": [
+        
+      ]
+    },
+    "responsesize": 5089
+  }
+}
