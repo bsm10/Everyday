@@ -9,78 +9,78 @@ using System.Collections.Generic;
 
 namespace Everyday
 {
-    public struct ErrorStatus
+    public class ErrorStatus
     {
         /*Результаты обработки запросов
         Каждый ответ сервера начинается с параметра success, который равняется  «1», если запрос обработан успешно или «0», если возникли какие-либо ошибки. 
         Остальные параметры ответов и их структура  различаются в зависимости от запроса.
         В случае возникновения ошибки (success=0) скрипты возвращают ее код (параметр error_code), а также 2 варианта текстового представления. Один вариант расшифровывает ошибку для разработчика (параметр error_description). 2-й вариант – error_for_user (общая фраза + код ошибки) служит для вывода (при необходимости) пользователю устройства. По своей сути error_for_user – это фраза обобщающая группу однородных ошибок.*/
-        public int success;
-        public string error_code;
-        public string error_description;
-        public string error_for_user;
-        public string working_time;
+        public int success {get; set;}
+        public string error_code { get; set; }
+        public string error_description { get; set; }
+        public string error_for_user { get; set; }
+        public string working_time { get; set; }
     }
-    public struct LoginData
+    public class LoginData
     {
-        public int success;
-        public string token;
-        public string client_id;
-        public int new_notifications_count;
-        public int not_confirmed_events_count;
-        public float working_time;
+        public int success { get; set; }
+        public string token { get; set; }
+        public string client_id { get; set; }
+        public int new_notifications_count { get; set; }
+        public int not_confirmed_events_count { get; set; }
+        public float working_time { get; set; }
     }
-    public struct Result
+    public class Result
     {
         public int success { get; set; }
     }
-    public struct Items
+    public class Items
     {
-        public string id;
-        public string name;
+        public string id { get; set; }
+        public string name { get; set; }
     }
-    public struct Events
+    public class Events
     {
-        public string event_id;
-        public string img;
-        public string time;
-        public string expert;
-        public string caption;
-        public int confirmed;
-        public int items_count;
-        public Items[] items;
-        public int a_day_events_count;
-        public int not_confirmed_events_count;
-        public float working_time;
+        public string event_id { get; set; }
+        public string img { get; set; }
+        public string time{get; set;}
+        public string expert { get; set; }
+        public string caption { get; set; }
+        public int confirmed { get; set; }
+        public int items_count { get; set; }
+        public Items[] items { get; set; }
+        public int a_day_events_count { get; set; }
+        public int not_confirmed_events_count { get; set; }
+        public float working_time { get; set; }
     }
-    public struct GetEvents
+    public class GetEvents
     {
-        public int success;
-        public string a_day_string;
-        public string a_day_date;
-        public Events[] events;
+        public int success { get; set; }
+        public string a_day_string { get; set; }
+        public string a_day_date { get; set; }
+        public Events[] events { get; set; }
     }
-    public struct AppSettings
+    public class AppSettings
     {
-        public bool confirm_events; // true,
-        public bool enable_report_eating; // true,
-        public bool enable_report_preparats; // true,
-        public int cache_period; // 7
+        public bool confirm_events { get; set; } // true,
+        public bool enable_report_eating { get; set; } // true,
+        public bool enable_report_preparats { get; set; } // true,
+        public int cache_period { get; set; } // 7
     }
-    public struct GetUserInfo
+    public class GetUserInfo
     {
-        public int success;
-        public string UserId;
-        public string UserLogin; // "elchukov",
-        public string UserImg; //"avatars/1.png",
-        public string UserF; //"Ельчуков",
-        public string UserI; // "Сергей",
-        public string UserO; // "Викторович",
-        public string UserDateReg; //"2014-06-23 14:37:46",
-        public AppSettings Settings;
-        public int not_confirmed_events_count; // 12,          
-        public int new_notifications_count; // 5,
-        public float working_time; // 0.002
+        public int success { get; set; }
+        public string UserId { get; set; }
+        public string UserLogin { get; set; } // "elchukov",
+        public string UserImg { get; set; } //"avatars/1.png",
+        public string UserF { get; set; } //"Ельчуков",
+        public string UserI { get; set; } // "Сергей",
+        public string UserO { get; set; } // "Викторович",
+        public string UserDateReg { get; set; } //"2014-06-23 14:37:46",
+        public AppSettings Settings { get; set; }
+        public int not_confirmed_events_count { get; set; } // 12,          
+        public int new_notifications_count { get; set; } // 5,
+        public float working_time { get; set; } // 0.002
     }
 
     public class Everyday 
@@ -152,15 +152,16 @@ namespace Everyday
 
     private int MakeQueryToServer(string qry)
         {
-        Result res;
+            ErrorStatus res;
             response = (string)GetResponse(qry);
-            res = JsonConvert.DeserializeObject<Result>(response);
+            
+            res = JsonConvert.DeserializeObject<ErrorStatus>(response) as ErrorStatus;
             if (res.success == 0)
             {
-                errStatus = JsonConvert.DeserializeObject<ErrorStatus>(response);
                 MessageBox.Show(errStatus.error_for_user);
+                return 0;
             }
-            return res.success;
+            return 1;
         }
 
     public object GetResponse(string QueryPHP, bool bBitmap=false) {
@@ -271,12 +272,12 @@ namespace Everyday
         public string details { get; set; }
     }
 
-    public class Result
-    {
-        public List<object> errors { get; set; }
-        public List<Warning> warnings { get; set; }
-        public List<object> notifies { get; set; }
-    }
+    //public class Result
+    //{
+    //    public List<object> errors { get; set; }
+    //    public List<Warning> warnings { get; set; }
+    //    public List<object> notifies { get; set; }
+    //}
 
     public class Messages
     {

@@ -1,253 +1,1125 @@
 {
-  "success": 1,
-  "a_day_string": "26 \u042f\u043d\u0432\u0430\u0440\u044f 2016",
-  "a_day_date": 1453759200,
-  "events": [
-    {
-      "event_id": 62200,
-      "img": "events\/1.png",
-      "time": "00:17",
-      "time_to_sort": 1456697820,
-      "expert": "Android App",
-      "caption": "\u041d\u0435\u0437\u0430\u043f\u043b\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u043f\u0440\u0438\u0435\u043c",
-      "event_name_id": 33,
-      "unscheduled": true,
-      "class": 1,
-      "items_count": "1",
-      "items": [
+
+    "success":1,
+    "last_events_update":"0",
+    "events":[
         {
-          "id": "0",
-          "name": "\u0448\u043e\u043a\u043e\u043b\u0430\u0434"
-        }
-      ],
-      "confirmed": 1
-    },
-    {
-      "event_id": 55098,
-      "img": "events\/1.png",
-      "time": "07:00",
-      "time_to_sort": 1456722000,
-      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
-      "caption": "\u041d\u0430\u0442\u043e\u0449\u0430\u043a",
-      "event_name_id": 8,
-      "unscheduled": false,
-      "class": 1,
-      "items_count": "1",
-      "items": [
-        {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "1291",
-          "name": "\u0412\u043e\u0434\u0430 \u043e\u0447\u0438\u0449\u0435\u043d\u043d\u0430\u044f (300)"
-        }
-      ],
-      "confirmed": 1
-    },
-    {
-      "event_id": 55099,
-      "img": "events\/1.png",
-      "time": "09:00",
-      "time_to_sort": 1456729200,
-      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
-      "caption": "\u0417\u0430\u0432\u0442\u0440\u0430\u043a",
-      "event_name_id": 1,
-      "unscheduled": false,
-      "class": 1,
-      "items_count": "1",
-      "items": [
-        {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "1327",
-          "name": "\u0422\u044b\u043a\u0432\u0435\u043d\u043d\u0430\u044f \u043a\u0430\u0448\u0430 \u0441 \u0438\u0437\u044e\u043c\u043e\u043c (330)"
-        }
-      ],
-      "confirmed": 1
-    },
-    {
-      "event_id": 57651,
-      "img": "events\/2.png",
-      "time": "09:00",
-      "time_to_sort": 1456729200,
-      "expert": "\u0421\u0435\u0440\u0433\u0435\u0439 \u0415\u043b\u044c\u0447\u0443\u043a\u043e\u0432",
-      "caption": "\u041f\u0440\u0435\u043f\u0430\u0440\u0430\u0442\u044b",
-      "event_name_id": 102,
-      "unscheduled": false,
-      "class": 2,
-      "items_count": "1",
-      "items": [
-        {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "27",
-          "name": "\u042f\u043d\u0442\u0430\u0440\u043d\u0430\u044f \u0424\u043e\u0440\u043c\u0443\u043b\u0430 (1 \u0442\u0430\u0431)"
-        }
-      ],
-      "confirmed": 1
-    },
-    {
-      "event_id": 55100,
-      "img": "events\/1.png",
-      "time": "11:00",
-      "time_to_sort": 1456736400,
-      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
-      "caption": "\u0412\u0442\u043e\u0440\u043e\u0439 \u0437\u0430\u0432\u0442\u0440\u0430\u043a",
-      "event_name_id": 2,
-      "unscheduled": false,
-      "class": 1,
-      "items_count": "1",
-      "items": [
-        {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "16946",
-          "name": "\u0424\u0440\u0443\u043a\u0442\u044b, \u0441\u043c\u0435\u0441\u044c, (\u0447\u0435\u0440\u043d\u043e\u0441\u043b\u0438\u0432, \u0430\u0431\u0440\u0438\u043a\u043e\u0441 \u0438 \u0433\u0440\u0443\u0448\u0430), \u0441\u0443\u0445\u0430\u044f\n\u0424\u0440\u0443\u043a\u0442\u044b \u043f\u043e \u0441\u0435\u0437\u043e\u043d\u0443 (250)"
-        }
-      ],
-      "confirmed": 1
-    },
-    {
-      "event_id": 55101,
-      "img": "events\/1.png",
-      "time": "13:00",
-      "time_to_sort": 1456743600,
-      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
-      "caption": "\u041e\u0431\u0435\u0434",
-      "event_name_id": 3,
-      "unscheduled": false,
-      "class": 1,
-      "items_count": "3",
-      "items": [
-        {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "1324",
-          "name": "\u041a\u0430\u0440\u0442\u043e\u0444\u0435\u043b\u044c\u043d\u043e\u0435 \u043f\u044e\u0440\u0435 (170)"
+            "event_class":1,
+            "id":55274,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-24",
+            "time":"07:00",
+            "event_name":"Натощак",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":0,
+            "comment":"auto",
+            "details":{
+                "proteins":"0.00",
+                "fats":"0.00",
+                "carbs":"0.00",
+                "cellulose":"0.00",
+                "kkal":"0.00",
+                "items":[
+                    {
+                        "id":"77035",
+                        "event_id":"55274",
+                        "item_type_id":"2",
+                        "reference_item_id":"1291",
+                        "dish_count":"300.00",
+                        "measure":null,
+                        "proteins":"0.00",
+                        "fats":"0.00",
+                        "carbs":"0.00",
+                        "cellulose":"0.00",
+                        "kkal":"0.00",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Вода очищенная"
+                    }
+                ]
+            },
+            "data_md5":"bc454b86261cf174c7359ce9528fb51e"
         },
         {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "1188",
-          "name": "\u0421\u0430\u043b\u0430\u0442 \u0438\u0437 \u043a\u0430\u043f\u0443\u0441\u0442\u044b \u0438 \u0441\u043b\u0430\u0434\u043a\u043e\u0433\u043e \u043f\u0435\u0440\u0446\u0430 (160)"
+            "event_class":1,
+            "id":55275,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-24",
+            "time":"09:00",
+            "event_name":"Завтрак",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":0,
+            "comment":"auto",
+            "details":{
+                "proteins":"41.75",
+                "fats":"36.99",
+                "carbs":"133.62",
+                "cellulose":"4.29",
+                "kkal":"1054.25",
+                "items":[
+                    {
+                        "id":"77036",
+                        "event_id":"55275",
+                        "item_type_id":"2",
+                        "reference_item_id":"1188",
+                        "dish_count":"160.00",
+                        "measure":null,
+                        "proteins":"5.60",
+                        "fats":"5.66",
+                        "carbs":"7.20",
+                        "cellulose":"2.43",
+                        "kkal":"103.06",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Салат из капусты и сладкого перца"
+                    },
+                    {
+                        "id":"77037",
+                        "event_id":"55275",
+                        "item_type_id":"2",
+                        "reference_item_id":"546",
+                        "dish_count":"147.50",
+                        "measure":null,
+                        "proteins":"12.05",
+                        "fats":"10.44",
+                        "carbs":"42.14",
+                        "cellulose":"0.62",
+                        "kkal":"317.07",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Блинчики творожные"
+                    },
+                    {
+                        "id":"77038",
+                        "event_id":"55275",
+                        "item_type_id":"2",
+                        "reference_item_id":"546",
+                        "dish_count":"147.50",
+                        "measure":null,
+                        "proteins":"12.05",
+                        "fats":"10.44",
+                        "carbs":"42.14",
+                        "cellulose":"0.62",
+                        "kkal":"317.07",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Блинчики творожные"
+                    },
+                    {
+                        "id":"77039",
+                        "event_id":"55275",
+                        "item_type_id":"2",
+                        "reference_item_id":"546",
+                        "dish_count":"147.50",
+                        "measure":null,
+                        "proteins":"12.05",
+                        "fats":"10.44",
+                        "carbs":"42.14",
+                        "cellulose":"0.62",
+                        "kkal":"317.07",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Блинчики творожные"
+                    }
+                ]
+            },
+            "data_md5":"93e1e19cf88e3dbd3e89dfd1f31c1fe6"
         },
         {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "1351",
-          "name": "\u041f\u043e\u0441\u0442\u043d\u044b\u0439 \u0434\u0438\u0435\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0431\u043e\u0440\u0449 (240)"
-        }
-      ],
-      "confirmed": 1
-    },
-    {
-      "event_id": 55102,
-      "img": "events\/1.png",
-      "time": "16:00",
-      "time_to_sort": 1456754400,
-      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
-      "caption": "\u041f\u043e\u043b\u0434\u043d\u0438\u043a",
-      "event_name_id": 4,
-      "unscheduled": false,
-      "class": 1,
-      "items_count": "1",
-      "items": [
-        {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "16946",
-          "name": "\u0424\u0440\u0443\u043a\u0442\u044b, \u0441\u043c\u0435\u0441\u044c, (\u0447\u0435\u0440\u043d\u043e\u0441\u043b\u0438\u0432, \u0430\u0431\u0440\u0438\u043a\u043e\u0441 \u0438 \u0433\u0440\u0443\u0448\u0430), \u0441\u0443\u0445\u0430\u044f\n\u0424\u0440\u0443\u043a\u0442\u044b \u043f\u043e \u0441\u0435\u0437\u043e\u043d\u0443 (250)"
-        }
-      ],
-      "confirmed": 1
-    },
-    {
-      "event_id": 55103,
-      "img": "events\/1.png",
-      "time": "19:00",
-      "time_to_sort": 1456765200,
-      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
-      "caption": "\u0423\u0436\u0438\u043d",
-      "event_name_id": 6,
-      "unscheduled": false,
-      "class": 1,
-      "items_count": "3",
-      "items": [
-        {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "121",
-          "name": "\u0422\u0432\u043e\u0440\u043e\u0436\u043d\u0430\u044f \u0437\u0430\u043f\u0435\u043a\u0430\u043d\u043a\u0430 \u0441 \u0438\u0437\u044e\u043c\u043e\u043c (320)"
+            "event_class":1,
+            "id":55276,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-24",
+            "time":"11:00",
+            "event_name":"Второй завтрак",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":0,
+            "comment":"auto",
+            "details":{
+                "proteins":"4.50",
+                "fats":"0.00",
+                "carbs":"45.00",
+                "cellulose":"9.00",
+                "kkal":"0.00",
+                "items":[
+                    {
+                        "id":"77040",
+                        "event_id":"55276",
+                        "item_type_id":"1",
+                        "reference_item_id":"16946",
+                        "dish_count":"250.00",
+                        "measure":null,
+                        "proteins":"2.50",
+                        "fats":"0.00",
+                        "carbs":"25.00",
+                        "cellulose":"5.00",
+                        "kkal":"0.00",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Фрукты по сезону"
+                    },
+                    {
+                        "id":"77041",
+                        "event_id":"55276",
+                        "item_type_id":"1",
+                        "reference_item_id":"16946",
+                        "dish_count":"200.00",
+                        "measure":null,
+                        "proteins":"2.00",
+                        "fats":"0.00",
+                        "carbs":"20.00",
+                        "cellulose":"4.00",
+                        "kkal":"0.00",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Фрукты по сезону"
+                    }
+                ]
+            },
+            "data_md5":"652183f1c5495a55934f7c3ef22143b8"
         },
         {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "173",
-          "name": "\u042f\u0431\u043b\u043e\u043a\u043e \u043f\u0435\u0447\u0435\u043d\u043e\u0435 \u0441 \u043c\u0435\u0434\u043e\u043c \u0438 \u043a\u043e\u0440\u0438\u0446\u0435\u0439 (160)"
+            "event_class":1,
+            "id":55277,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-24",
+            "time":"13:00",
+            "event_name":"Обед",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":0,
+            "comment":"auto",
+            "details":{
+                "proteins":"36.49",
+                "fats":"16.31",
+                "carbs":"42.53",
+                "cellulose":"6.10",
+                "kkal":"459.01",
+                "items":[
+                    {
+                        "id":"77042",
+                        "event_id":"55277",
+                        "item_type_id":"2",
+                        "reference_item_id":"145",
+                        "dish_count":"210.00",
+                        "measure":null,
+                        "proteins":"24.23",
+                        "fats":"3.21",
+                        "carbs":"4.85",
+                        "cellulose":"0.86",
+                        "kkal":"143.49",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Рыба морская запеченная с овощами"
+                    },
+                    {
+                        "id":"77043",
+                        "event_id":"55277",
+                        "item_type_id":"2",
+                        "reference_item_id":"1188",
+                        "dish_count":"200.00",
+                        "measure":null,
+                        "proteins":"7.00",
+                        "fats":"7.08",
+                        "carbs":"9.00",
+                        "cellulose":"3.04",
+                        "kkal":"128.82",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Салат из капусты и сладкого перца"
+                    },
+                    {
+                        "id":"77044",
+                        "event_id":"55277",
+                        "item_type_id":"2",
+                        "reference_item_id":"61",
+                        "dish_count":"30.00",
+                        "measure":null,
+                        "proteins":"3.03",
+                        "fats":"0.69",
+                        "carbs":"17.13",
+                        "cellulose":"0.00",
+                        "kkal":"88.50",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Хлебцы мультизерновые"
+                    },
+                    {
+                        "id":"77045",
+                        "event_id":"55277",
+                        "item_type_id":"2",
+                        "reference_item_id":"123",
+                        "dish_count":"250.00",
+                        "measure":null,
+                        "proteins":"2.23",
+                        "fats":"5.33",
+                        "carbs":"11.55",
+                        "cellulose":"2.20",
+                        "kkal":"98.20",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Суп овощной"
+                    }
+                ]
+            },
+            "data_md5":"044bc3158badfaf1fd1dfb56612c3dff"
         },
         {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "173",
-          "name": "\u042f\u0431\u043b\u043e\u043a\u043e \u043f\u0435\u0447\u0435\u043d\u043e\u0435 \u0441 \u043c\u0435\u0434\u043e\u043c \u0438 \u043a\u043e\u0440\u0438\u0446\u0435\u0439 (160)"
-        }
-      ],
-      "confirmed": 1
-    },
-    {
-      "event_id": 55104,
-      "img": "events\/1.png",
-      "time": "21:00",
-      "time_to_sort": 1456772400,
-      "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
-      "caption": "\u041f\u043e\u0437\u0434\u043d\u0438\u0439 \u0443\u0436\u0438\u043d",
-      "event_name_id": 7,
-      "unscheduled": false,
-      "class": 1,
-      "items_count": "1",
-      "items": [
+            "event_class":1,
+            "id":55278,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-24",
+            "time":"16:00",
+            "event_name":"Полдник",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":0,
+            "comment":"auto",
+            "details":{
+                "proteins":"4.32",
+                "fats":"2.24",
+                "carbs":"15.55",
+                "cellulose":"0.83",
+                "kkal":"98.55",
+                "items":[
+                    {
+                        "id":"77046",
+                        "event_id":"55278",
+                        "item_type_id":"2",
+                        "reference_item_id":"176",
+                        "dish_count":"150.05",
+                        "measure":null,
+                        "proteins":"4.32",
+                        "fats":"2.24",
+                        "carbs":"15.55",
+                        "cellulose":"0.83",
+                        "kkal":"98.55",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Смузи бананово-мандариновый с йогуртом"
+                    }
+                ]
+            },
+            "data_md5":"ac1631f411289378c75ba031978aadca"
+        },
         {
-          "0": "GetEvents",
-          "1": "php",
-          "id": "16507",
-          "name": "\u041a\u0430\u0440\u043f, \u0440\u044b\u0431\u0430\n\u0422\u043e\u043b\u0441\u0442\u043e\u043b\u043e\u0431\u0438\u043a \u0431\u0435\u043b\u044b\u0439 \u0441\u0432\u0435\u0436\u0438\u0439 (200)"
+            "event_class":1,
+            "id":55279,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-24",
+            "time":"19:00",
+            "event_name":"Ужин",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":0,
+            "comment":"auto",
+            "details":{
+                "proteins":"48.55",
+                "fats":"28.44",
+                "carbs":"35.81",
+                "cellulose":"0.47",
+                "kkal":"592.32",
+                "items":[
+                    {
+                        "id":"77047",
+                        "event_id":"55279",
+                        "item_type_id":"2",
+                        "reference_item_id":"1148",
+                        "dish_count":"200.00",
+                        "measure":null,
+                        "proteins":"39.10",
+                        "fats":"12.30",
+                        "carbs":"0.86",
+                        "cellulose":"0.00",
+                        "kkal":"269.70",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Рыба в фольге (мультиварка)"
+                    },
+                    {
+                        "id":"77048",
+                        "event_id":"55279",
+                        "item_type_id":"2",
+                        "reference_item_id":"1024",
+                        "dish_count":"205.00",
+                        "measure":null,
+                        "proteins":"1.52",
+                        "fats":"0.51",
+                        "carbs":"10.66",
+                        "cellulose":"0.47",
+                        "kkal":"53.05",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Овощное рагу с кабачками"
+                    },
+                    {
+                        "id":"77049",
+                        "event_id":"55279",
+                        "item_type_id":"2",
+                        "reference_item_id":"1332",
+                        "dish_count":"117.50",
+                        "measure":null,
+                        "proteins":"7.93",
+                        "fats":"15.63",
+                        "carbs":"24.29",
+                        "cellulose":"0.00",
+                        "kkal":"269.57",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Блинчик со сметаной"
+                    }
+                ]
+            },
+            "data_md5":"09c182eaa8981bf3cb4ecbf49f321bf7"
+        },
+        {
+            "event_class":1,
+            "id":55280,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-24",
+            "time":"21:00",
+            "event_name":"Поздний ужин",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":0,
+            "comment":"auto",
+            "details":{
+                "proteins":"32.00",
+                "fats":"7.20",
+                "carbs":"0.00",
+                "cellulose":"0.00",
+                "kkal":"0.00",
+                "items":[
+                    {
+                        "id":"77050",
+                        "event_id":"55280",
+                        "item_type_id":"1",
+                        "reference_item_id":"16507",
+                        "dish_count":"200.00",
+                        "measure":null,
+                        "proteins":"32.00",
+                        "fats":"7.20",
+                        "carbs":"0.00",
+                        "cellulose":"0.00",
+                        "kkal":"0.00",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Толстолобик белый свежий"
+                    }
+                ]
+            },
+            "data_md5":"f4b341808454be3117d82e24b211004a"
+        },
+        {
+            "event_class":1,
+            "id":55281,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-25",
+            "time":"07:00",
+            "event_name":"Натощак",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":1,
+            "comment":"auto",
+            "details":{
+                "proteins":"0.00",
+                "fats":"0.00",
+                "carbs":"0.00",
+                "cellulose":"0.00",
+                "kkal":"0.00",
+                "items":[
+                    {
+                        "id":"77051",
+                        "event_id":"55281",
+                        "item_type_id":"2",
+                        "reference_item_id":"1291",
+                        "dish_count":"300.00",
+                        "measure":null,
+                        "proteins":"0.00",
+                        "fats":"0.00",
+                        "carbs":"0.00",
+                        "cellulose":"0.00",
+                        "kkal":"0.00",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Вода очищенная"
+                    }
+                ]
+            },
+            "data_md5":"1c013029c8497e6fb6cf68b4267ced2a"
+        },
+        {
+            "event_class":1,
+            "id":55282,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-25",
+            "time":"09:00",
+            "event_name":"Завтрак",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":1,
+            "comment":"auto",
+            "details":{
+                "proteins":"21.10",
+                "fats":"19.14",
+                "carbs":"49.01",
+                "cellulose":"2.24",
+                "kkal":"453.40",
+                "items":[
+                    {
+                        "id":"77052",
+                        "event_id":"55282",
+                        "item_type_id":"2",
+                        "reference_item_id":"61",
+                        "dish_count":"30.00",
+                        "measure":null,
+                        "proteins":"3.03",
+                        "fats":"0.69",
+                        "carbs":"17.13",
+                        "cellulose":"0.00",
+                        "kkal":"88.50",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Хлебцы мультизерновые"
+                    },
+                    {
+                        "id":"77053",
+                        "event_id":"55282",
+                        "item_type_id":"2",
+                        "reference_item_id":"61",
+                        "dish_count":"30.00",
+                        "measure":null,
+                        "proteins":"3.03",
+                        "fats":"0.69",
+                        "carbs":"17.13",
+                        "cellulose":"0.00",
+                        "kkal":"88.50",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Хлебцы мультизерновые"
+                    },
+                    {
+                        "id":"77054",
+                        "event_id":"55282",
+                        "item_type_id":"2",
+                        "reference_item_id":"1265",
+                        "dish_count":"165.00",
+                        "measure":null,
+                        "proteins":"3.96",
+                        "fats":"3.25",
+                        "carbs":"9.64",
+                        "cellulose":"2.24",
+                        "kkal":"80.29",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Овощи тушеные с грибами"
+                    },
+                    {
+                        "id":"77055",
+                        "event_id":"55282",
+                        "item_type_id":"2",
+                        "reference_item_id":"1321",
+                        "dish_count":"120.01",
+                        "measure":null,
+                        "proteins":"11.08",
+                        "fats":"14.51",
+                        "carbs":"5.11",
+                        "cellulose":"0.00",
+                        "kkal":"196.11",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Омлет с сыром и зеленью"
+                    }
+                ]
+            },
+            "data_md5":"b6a9b7e307cdcd7a99087647d6975f33"
+        },
+        {
+            "event_class":1,
+            "id":55283,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-25",
+            "time":"11:00",
+            "event_name":"Второй завтрак",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":1,
+            "comment":"auto",
+            "details":{
+                "proteins":"2.50",
+                "fats":"0.00",
+                "carbs":"25.00",
+                "cellulose":"5.00",
+                "kkal":"0.00",
+                "items":[
+                    {
+                        "id":"77056",
+                        "event_id":"55283",
+                        "item_type_id":"1",
+                        "reference_item_id":"16946",
+                        "dish_count":"250.00",
+                        "measure":null,
+                        "proteins":"2.50",
+                        "fats":"0.00",
+                        "carbs":"25.00",
+                        "cellulose":"5.00",
+                        "kkal":"0.00",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Фрукты по сезону"
+                    }
+                ]
+            },
+            "data_md5":"264dbec46b1ad5e2477ce7f8222a2c9f"
+        },
+        {
+            "event_class":1,
+            "id":55284,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-25",
+            "time":"13:00",
+            "event_name":"Обед",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":0,
+            "comment":"auto",
+            "details":{
+                "proteins":"30.92",
+                "fats":"18.60",
+                "carbs":"21.06",
+                "cellulose":"4.05",
+                "kkal":"385.41",
+                "items":[
+                    {
+                        "id":"77057",
+                        "event_id":"55284",
+                        "item_type_id":"2",
+                        "reference_item_id":"1188",
+                        "dish_count":"250.00",
+                        "measure":null,
+                        "proteins":"8.75",
+                        "fats":"8.85",
+                        "carbs":"11.25",
+                        "cellulose":"3.80",
+                        "kkal":"161.03",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Салат из капусты и сладкого перца"
+                    },
+                    {
+                        "id":"77058",
+                        "event_id":"55284",
+                        "item_type_id":"2",
+                        "reference_item_id":"735",
+                        "dish_count":"250.00",
+                        "measure":null,
+                        "proteins":"8.00",
+                        "fats":"5.45",
+                        "carbs":"5.78",
+                        "cellulose":"0.25",
+                        "kkal":"102.58",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Гречневый суп с говядиной"
+                    },
+                    {
+                        "id":"77059",
+                        "event_id":"55284",
+                        "item_type_id":"2",
+                        "reference_item_id":"1057",
+                        "dish_count":"110.00",
+                        "measure":null,
+                        "proteins":"14.17",
+                        "fats":"4.30",
+                        "carbs":"4.04",
+                        "cellulose":"0.00",
+                        "kkal":"121.81",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Отбивная из телятины"
+                    }
+                ]
+            },
+            "data_md5":"9b0244659f0ecc86763ba3da6aef8167"
+        },
+        {
+            "event_class":1,
+            "id":55285,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-25",
+            "time":"16:00",
+            "event_name":"Полдник",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":1,
+            "comment":"auto",
+            "details":{
+                "proteins":"2.50",
+                "fats":"0.00",
+                "carbs":"25.00",
+                "cellulose":"5.00",
+                "kkal":"0.00",
+                "items":[
+                    {
+                        "id":"77060",
+                        "event_id":"55285",
+                        "item_type_id":"1",
+                        "reference_item_id":"16946",
+                        "dish_count":"250.00",
+                        "measure":null,
+                        "proteins":"2.50",
+                        "fats":"0.00",
+                        "carbs":"25.00",
+                        "cellulose":"5.00",
+                        "kkal":"0.00",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Фрукты по сезону"
+                    }
+                ]
+            },
+            "data_md5":"cc2da702294156b3fe58687f241e660e"
+        },
+        {
+            "event_class":1,
+            "id":55286,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-25",
+            "time":"19:00",
+            "event_name":"Ужин",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":0,
+            "comment":"auto",
+            "details":{
+                "proteins":"27.74",
+                "fats":"13.68",
+                "carbs":"55.64",
+                "cellulose":"15.13",
+                "kkal":"356.31",
+                "items":[
+                    {
+                        "id":"77061",
+                        "event_id":"55286",
+                        "item_type_id":"1",
+                        "reference_item_id":"16946",
+                        "dish_count":"160.00",
+                        "measure":null,
+                        "proteins":"1.60",
+                        "fats":"0.00",
+                        "carbs":"16.00",
+                        "cellulose":"3.20",
+                        "kkal":"0.00",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Фрукты по сезону"
+                    },
+                    {
+                        "id":"77062",
+                        "event_id":"55286",
+                        "item_type_id":"2",
+                        "reference_item_id":"1355",
+                        "dish_count":"310.00",
+                        "measure":null,
+                        "proteins":"22.41",
+                        "fats":"12.83",
+                        "carbs":"2.42",
+                        "cellulose":"0.00",
+                        "kkal":"206.31",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Зеленый салат с креветками"
+                    },
+                    {
+                        "id":"77063",
+                        "event_id":"55286",
+                        "item_type_id":"2",
+                        "reference_item_id":"142",
+                        "dish_count":"250.00",
+                        "measure":null,
+                        "proteins":"3.73",
+                        "fats":"0.85",
+                        "carbs":"37.23",
+                        "cellulose":"11.93",
+                        "kkal":"150.00",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Тыква запеченная с сухофруктами и яблоками"
+                    }
+                ]
+            },
+            "data_md5":"407aa9015a8d1698a03e110c231cb2a4"
+        },
+        {
+            "event_class":1,
+            "id":55287,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-25",
+            "time":"21:00",
+            "event_name":"Поздний ужин",
+            "expert_name":"Дмитрий Кулиничев",
+            "confirmed":0,
+            "comment":"auto",
+            "details":{
+                "proteins":"7.00",
+                "fats":"6.25",
+                "carbs":"9.75",
+                "cellulose":"0.00",
+                "kkal":"0.00",
+                "items":[
+                    {
+                        "id":"77064",
+                        "event_id":"55287",
+                        "item_type_id":"1",
+                        "reference_item_id":"13886",
+                        "dish_count":"250.00",
+                        "measure":null,
+                        "proteins":"7.00",
+                        "fats":"6.25",
+                        "carbs":"9.75",
+                        "cellulose":"0.00",
+                        "kkal":"0.00",
+                        "repeats":null,
+                        "sets":null,
+                        "rest":null,
+                        "exercises_count":null,
+                        "caption":"Кефир 2.5%"
+                    }
+                ]
+            },
+            "data_md5":"9d6898edeefeb2b5f77f52bcd85f7715"
+        },
+        {
+            "event_class":9,
+            "id":1125,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-22",
+            "time":"10:30",
+            "event_name":"Рекрутинг",
+            "expert_name":"Сергей Ельчуков",
+            "confirmed":1,
+            "comment":"(перенесена c 2016-02-12 10:30:00)",
+            "details":{
+                "descr":"Взять на работу по трудовому договору3 человека на Полтаваэлеткросервис - Фиросв, бухгалтер",
+                "assoc_client":null,
+                "performers":{
+                    "1472":{
+                        "id":"1472",
+                        "expert_name":"Сергей Ельчуков",
+                        "expert_login":"Elchukov",
+                        "avatar":"http://go.pl.ua/uploads/users/5/1455458809_thumb.jpg",
+                        "expert_sex":"1",
+                        "task_id":"1125",
+                        "expert_id":"5",
+                        "mail":"elchukoff@gmail.com"
+                    }
+                }
+            },
+            "data_md5":"633c348a705da9a40a5a313db40edd5f"
+        },
+        {
+            "event_class":9,
+            "id":799,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-22",
+            "time":"11:00",
+            "event_name":"Рекрутинг",
+            "expert_name":"Сергей Ельчуков",
+            "confirmed":1,
+            "comment":"(перенесена c 2016-01-04 11:00:00) (перенесена c 2016-01-11 11:00:00) (перенесена c 2016-01-18 11:00:00) (перенесена c 2016-01-25 11:00:00) (перенесена c 2016-02-01 11:00:00) (перенесена c 2016-02-08 11:00:00)",
+            "details":{
+                "descr":"Начать писать чек-листы для работников . Создать автоматическое рабочее место для каждого исполнителя (ежедневное руководство к действию).",
+                "assoc_client":null,
+                "performers":{
+                    "1478":{
+                        "id":"1478",
+                        "expert_name":"Сергей Ельчуков",
+                        "expert_login":"Elchukov",
+                        "avatar":"http://go.pl.ua/uploads/users/5/1455458809_thumb.jpg",
+                        "expert_sex":"1",
+                        "task_id":"799",
+                        "expert_id":"5",
+                        "mail":"elchukoff@gmail.com"
+                    }
+                }
+            },
+            "data_md5":"3524d6e302634a347a860a8187e05d85"
+        },
+        {
+            "event_class":9,
+            "id":1241,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-22",
+            "time":"11:30",
+            "event_name":"Мероприятия",
+            "expert_name":"Сергей Ельчуков",
+            "confirmed":1,
+            "comment":null,
+            "details":{
+                "descr":"Ответить Алексею Шевелю по деньгам",
+                "assoc_client":null,
+                "performers":{
+                    "1466":{
+                        "id":"1466",
+                        "expert_name":"Сергей Ельчуков",
+                        "expert_login":"Elchukov",
+                        "avatar":"http://go.pl.ua/uploads/users/5/1455458809_thumb.jpg",
+                        "expert_sex":"1",
+                        "task_id":"1241",
+                        "expert_id":"5",
+                        "mail":"elchukoff@gmail.com"
+                    }
+                }
+            },
+            "data_md5":"e7b0b845226c73af6e2a33cc2957af35"
+        },
+        {
+            "event_class":9,
+            "id":1243,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-22",
+            "time":"17:30",
+            "event_name":"Мероприятия",
+            "expert_name":"Сергей Ельчуков",
+            "confirmed":1,
+            "comment":" (перенесена c 2016-02-19 17:30:00)",
+            "details":{
+                "descr":"Встреча с Валентиной "Сырное Королевство"",
+                "assoc_client":null,
+                "performers":{
+                    "1467":{
+                        "id":"1467",
+                        "expert_name":"Сергей Ельчуков",
+                        "expert_login":"Elchukov",
+                        "avatar":"http://go.pl.ua/uploads/users/5/1455458809_thumb.jpg",
+                        "expert_sex":"1",
+                        "task_id":"1243",
+                        "expert_id":"5",
+                        "mail":"elchukoff@gmail.com"
+                    }
+                }
+            },
+            "data_md5":"6df3106ae51dc3473366bac3a75a9752"
+        },
+        {
+            "event_class":9,
+            "id":1246,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-24",
+            "time":"11:30",
+            "event_name":"Проплатить",
+            "expert_name":"Сергей Ельчуков",
+            "confirmed":1,
+            "comment":null,
+            "details":{
+                "descr":"Оплата аренды помещения - январь",
+                "assoc_client":null,
+                "performers":{
+                    "1481":{
+                        "id":"1481",
+                        "expert_name":"Сергей Ельчуков",
+                        "expert_login":"Elchukov",
+                        "avatar":"http://go.pl.ua/uploads/users/5/1455458809_thumb.jpg",
+                        "expert_sex":"1",
+                        "task_id":"1246",
+                        "expert_id":"5",
+                        "mail":"elchukoff@gmail.com"
+                    }
+                }
+            },
+            "data_md5":"d4c4cb430cbc3807204ff24d38d59e41"
+        },
+        {
+            "event_class":9,
+            "id":1287,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-24",
+            "time":"12:30",
+            "event_name":"Мероприятия",
+            "expert_name":"Сергей Ельчуков",
+            "confirmed":1,
+            "comment":null,
+            "details":{
+                "descr":"Убрать (продать) котел с гаража",
+                "assoc_client":null,
+                "performers":{
+                    "1528":{
+                        "id":"1528",
+                        "expert_name":"Сергей Ельчуков",
+                        "expert_login":"Elchukov",
+                        "avatar":"http://go.pl.ua/uploads/users/5/1455458809_thumb.jpg",
+                        "expert_sex":"1",
+                        "task_id":"1287",
+                        "expert_id":"5",
+                        "mail":"elchukoff@gmail.com"
+                    }
+                }
+            },
+            "data_md5":"de1a6573dedb3ceeeaf4ca17e0828a98"
+        },
+        {
+            "event_class":9,
+            "id":1286,
+            "img":{
+                "path":null,
+                "md5":null
+            },
+            "date":"2016-02-25",
+            "time":"12:00",
+            "event_name":"Мероприятия",
+            "expert_name":"Сергей Ельчуков",
+            "confirmed":1,
+            "comment":null,
+            "details":{
+                "descr":"Отправить проект "Линк" в Кременчуг",
+                "assoc_client":null,
+                "performers":{
+                    "1527":{
+                        "id":"1527",
+                        "expert_name":"Сергей Ельчуков",
+                        "expert_login":"Elchukov",
+                        "avatar":"http://go.pl.ua/uploads/users/5/1455458809_thumb.jpg",
+                        "expert_sex":"1",
+                        "task_id":"1286",
+                        "expert_id":"5",
+                        "mail":"elchukoff@gmail.com"
+                    }
+                }
+            },
+            "data_md5":"831446b71b1149630263db7ce48519aa"
         }
-      ],
-      "confirmed": 1
+    ],
+    "DevMode":true,
+    "result":{
+        "errors":{
+        },
+        "warnings":{
+        },
+        "notifies":{
+        }
+    },
+    "debug":{
+        "client_id":"1",
+        "runtime":0.0255,
+        "script":"rGetEvents",
+        "queries":44,
+        "messages":{
+            "errors":{
+            },
+            "warnings":{
+            },
+            "notifies":{
+            }
+        },
+        "responsesize":59158
     }
-  ],
-  "a_day_events_count": 9,
-  "DevMode": true,
-  "result": {
-    "errors": [
-      
-    ],
-    "warnings": [
-      {
-        "code": 50,
-        "caption": "\u041c\u0435\u0442\u043e\u0434 \u0432\u0435\u0440\u043d\u0443\u043b \u043f\u0443\u0441\u0442\u043e\u0439 \u043c\u0430\u0441\u0441\u0438\u0432",
-        "details": "getTasksList"
-      }
-    ],
-    "notifies": [
-      
-    ]
-  },
-  "debug": {
-    "client_id": "1",
-    "runtime": 0.0356,
-    "script": "GetEvents",
-    "queries": 18,
-    "messages": {
-      "errors": [
-        
-      ],
-      "warnings": [
-        "50|\u041c\u0435\u0442\u043e\u0434 \u0432\u0435\u0440\u043d\u0443\u043b \u043f\u0443\u0441\u0442\u043e\u0439 \u043c\u0430\u0441\u0441\u0438\u0432|getTasksList"
-      ],
-      "notifies": [
-        
-      ]
-    },
-    "responsesize": 5089
-  }
+
 }
