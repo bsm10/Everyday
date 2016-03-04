@@ -168,8 +168,7 @@ public string SendPostRequest(Uri uri, string postData)
     request.Method = "POST";
     byte[] byteArray = Encoding.UTF8.GetBytes(postData);
     request.ContentLength = byteArray.Length;
-    request.ContentType = "application/x-www-form-urlencoded";
-        request.ContentLength = byteArray.Length;
+    request.ContentType = "text/html"; //"application/x-www-form-urlencoded";
     try
     {
         Stream dataStream = request.GetRequestStream();
