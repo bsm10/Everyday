@@ -6,6 +6,7 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 
 namespace Everyday
 {
@@ -30,69 +31,70 @@ namespace Everyday
         public int not_confirmed_events_count { get; set; }
         public float working_time { get; set; }
     }
-    public class Result
-    {
-        public int success { get; set; }
-    }
-    public class Items
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-    }
-    public class Events
-    {
-        public string event_id { get; set; }
-        public string img { get; set; }
-        public string time{get; set;}
-        public string expert { get; set; }
-        public string caption { get; set; }
-        public int confirmed { get; set; }
-        public int items_count { get; set; }
-        public Items[] items { get; set; }
-        public int a_day_events_count { get; set; }
-        public int not_confirmed_events_count { get; set; }
-        public float working_time { get; set; }
-    }
-    public class GetEvents
-    {
-        public int success { get; set; }
-        public string a_day_string { get; set; }
-        public string a_day_date { get; set; }
-        public Events[] events { get; set; }
-    }
-    public class AppSettings
-    {
-        public bool confirm_events { get; set; } // true,
-        public bool enable_report_eating { get; set; } // true,
-        public bool enable_report_preparats { get; set; } // true,
-        public int cache_period { get; set; } // 7
-    }
-    public class GetUserInfo
-    {
-        public int success { get; set; }
-        public string UserId { get; set; }
-        public string UserLogin { get; set; } // "elchukov",
-        public string UserImg { get; set; } //"avatars/1.png",
-        public string UserF { get; set; } //"Ельчуков",
-        public string UserI { get; set; } // "Сергей",
-        public string UserO { get; set; } // "Викторович",
-        public string UserDateReg { get; set; } //"2014-06-23 14:37:46",
-        public AppSettings Settings { get; set; }
-        public int not_confirmed_events_count { get; set; } // 12,          
-        public int new_notifications_count { get; set; } // 5,
-        public float working_time { get; set; } // 0.002
-    }
+    //public class Result
+    //{
+    //    public int success { get; set; }
+    //}
+    //public class Items
+    //{
+    //    public string id { get; set; }
+    //    public string name { get; set; }
+    //}
+    //public class Events
+    //{
+    //    public string event_id { get; set; }
+    //    public string img { get; set; }
+    //    public string time{get; set;}
+    //    public string expert { get; set; }
+    //    public string caption { get; set; }
+    //    public int confirmed { get; set; }
+    //    public int items_count { get; set; }
+    //    public Items[] items { get; set; }
+    //    public int a_day_events_count { get; set; }
+    //    public int not_confirmed_events_count { get; set; }
+    //    public float working_time { get; set; }
+    //}
+    //public class GetEvents
+    //{
+    //    public int success { get; set; }
+    //    public string a_day_string { get; set; }
+    //    public string a_day_date { get; set; }
+    //    public Events[] events { get; set; }
+    //}
+    //public class AppSettings
+    //{
+    //    public bool confirm_events { get; set; } // true,
+    //    public bool enable_report_eating { get; set; } // true,
+    //    public bool enable_report_preparats { get; set; } // true,
+    //    public int cache_period { get; set; } // 7
+    //}
+    //public class GetUserInfo
+    //{
+    //    public int success { get; set; }
+    //    public string UserId { get; set; }
+    //    public string UserLogin { get; set; } // "elchukov",
+    //    public string UserImg { get; set; } //"avatars/1.png",
+    //    public string UserF { get; set; } //"Ельчуков",
+    //    public string UserI { get; set; } // "Сергей",
+    //    public string UserO { get; set; } // "Викторович",
+    //    public string UserDateReg { get; set; } //"2014-06-23 14:37:46",
+    //    public AppSettings Settings { get; set; }
+    //    public int not_confirmed_events_count { get; set; } // 12,          
+    //    public int new_notifications_count { get; set; } // 5,
+    //    public float working_time { get; set; } // 0.002
+    //}
 
-    public class Everyday 
+    public sealed class Everyday 
     {
-        public LoginData loginData;
-        public ErrorStatus errStatus;
-        public GetEvents getEvents;
-        public GetUserInfo getUserInfo;
+        public LoginData loginData {get; set;}
+        public ErrorStatus errStatus { get; set; }
+        public GetEvents getEvents { get; set; }
+        //public GetUserInfo getUserInfo;
                 
         public string OSVersion = Environment.OSVersion.ToString();
         public string SERVER = "http://api.go.pl.ua/";
         public string SERVER_IMG = "http://api.go.pl.ua/img/640/";
+        public string SERVER_IOS = "http://api.go.pl.ua/ios/";
         public string ComputerID = "Test for Win8 bsm10";
         public string response;
         public Bitmap UserImg;
@@ -108,61 +110,90 @@ namespace Everyday
         }
         private int Login(string sLog, string sPass)
         {
-            string qry;
-            qry = (SERVER
-                        + (("Login.php?&Devid="
-                        + (ComputerID + ("&Platform="
-                        + (OSVersion + "&Query={\"login\":\""))))
-                        + (sLog + ("\",\"pass\":\""
-                        + (sPass + "\"}")))));
-            if (MakeQueryToServer(qry) == 1)
-            {
-                loginData = JsonConvert.DeserializeObject<LoginData>(response);
-            }
-            else return 0;
-            //qry = SERVER + "GetUserInfo.php?Token=" + loginData.token 
-            //             + "&Devid=" + ComputerID 
-            //             + "&Platform=" 
-            //             + OSVersion.ToString() + "&Query={}";
-            //""
-            qry = String.Format("{0}GetUserInfo.php?Token={1}&Devid={2}&Platform={3}&Query=", SERVER,loginData.token,ComputerID,OSVersion)+"{}";
-            if (MakeQueryToServer(qry) == 1)
-            {
-                getUserInfo = JsonConvert.DeserializeObject<GetUserInfo>(response);
-            }
-            else return 0;
+            Uri uri = new Uri(SERVER + "Login.php?");
+            string postData =  String.Format("&Devid={0}&Platform={1}&Query={{\"login\":\"{2}\",\"pass\":\"{3}\"}}", ComputerID, OSVersion, sLog, sPass);
+            if (MakeQueryToServer(uri, postData) == 0) return 0;
+            loginData = JsonConvert.DeserializeObject<LoginData>(response);
+
+            uri = new Uri(SERVER_IOS + "rGetEvents.php?");
+            postData = String.Format("Token={0}&Devid={1}&Platform={2}&Query={{\"date_start\":\"{3}\",\"date_end\":\"{4}\"}}",
+                                        loginData.token, "bsm11", "WinXP", "2016-02-20", "2016-02-21");
+
+            if (MakeQueryToServer(uri, postData) == 0) return 0;
+            getEvents = JsonConvert.DeserializeObject<GetEvents>(response);
 
             //UserImg =(Bitmap) GetResponse(SERVER + getUserInfo.UserImg, true);
-
-            SUCCESS=1;
+            SUCCESS = 1;
             return 1;
         }
-        public GetEvents GetEventsByData(string date) //date format "2014-08-20"
-    {
-        string qry = SERVER + "GetEvents.php?Token=" + loginData.token
-                     + "&Devid=" + ComputerID
-                     + "&Platform=" + OSVersion.ToString()
-                     + "&Query={" + quote + "aday" + quote + ":" + quote + date + quote + "}";
-        if (MakeQueryToServer(qry) == 1)
+        //=================================================================================================
+        //=================================================================================================
+        public GetEvents GetEventsByData(string date_start, string date_end) //date format "2014-08-20"
         {
-            getEvents = JsonConvert.DeserializeObject<GetEvents>(response);
+            Uri uri = new Uri(SERVER + "ios/rGetEvents.php?");
+            string postData = String.Format("Token={0}&Devid={1}&Platform={2}&Query={{\"date_start\":\"{3}\",\"date_end\":\"{4}\"}}",
+            loginData.token, ComputerID, OSVersion, date_start, date_end);
+            
+            if (MakeQueryToServer(uri,postData) == 0) return null;
+            GetEvents getEvents = JsonConvert.DeserializeObject<GetEvents>(response);
+            return getEvents;
         }
-        return getEvents;
-    }
-
-    private int MakeQueryToServer(string qry)
+        //=================================================================================================
+        //=================================================================================================
+        private int MakeQueryToServer(Uri uri, string postData)
         {
             ErrorStatus res;
-            response = (string)GetResponse(qry);
-            
+            //response = (string)GetResponse(qry);
+            response = SendPostRequest(uri, postData);
             res = JsonConvert.DeserializeObject<ErrorStatus>(response) as ErrorStatus;
             if (res.success == 0)
             {
-                MessageBox.Show(errStatus.error_for_user);
+                MessageBox.Show(res.error_for_user);
                 return 0;
             }
             return 1;
         }
+
+
+public string SendPostRequest(Uri uri, string postData)
+{
+    //Пример параметров
+    //Uri uri = new Uri("http://api.go.pl.ua/ios/GetEventDetails.php?");
+    //postData = "Token=ab34a3ca168ea757b7d8b618a5f15be4&Devid=&Platform=Mozilla/5.0%20%28Windows%20NT%206.3;%20WOW64;%20rv:41.0%29%20Gecko/20100101%20Firefox/41.0&Query={%22event_id%22:55104}";
+    HttpWebRequest request = HttpWebRequest.Create(uri) as HttpWebRequest;
+    //********************************************************************
+    request.Proxy = new WebProxy("10.0.0.112", 8080);
+    request.Proxy.Credentials = new NetworkCredential("bmaliy", "123");
+    //********************************************************************
+    request.Method = "POST";
+    byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+    request.ContentLength = byteArray.Length;
+    request.ContentType = "application/x-www-form-urlencoded";
+        request.ContentLength = byteArray.Length;
+    try
+    {
+        Stream dataStream = request.GetRequestStream();
+        dataStream.Write(byteArray, 0, byteArray.Length);
+        dataStream.Close();
+
+        HttpWebResponse response = request.GetResponse() as HttpWebResponse;
+
+        Encoding enc = Encoding.GetEncoding("windows-1251");
+        StreamReader sr = new StreamReader(response.GetResponseStream(), Encoding.ASCII);
+        string responseContent = sr.ReadToEnd();
+        sr.Close();
+        response.Close();
+        return responseContent;
+    }
+    catch (Exception ex)
+    {
+        request = null;
+        MessageBox.Show(ex.Message.ToString());
+        return "";
+    }
+
+    
+}
 
     public object GetResponse(string QueryPHP, bool bBitmap=false) {
         HttpWebRequest request;
@@ -214,98 +245,5 @@ namespace Everyday
         return "NoData";
     }
 
-//{
-  //"success": 1,
-  //"a_day_string": "26 \u042f\u043d\u0432\u0430\u0440\u044f 2016",
-  //"a_day_date": 1453759200,
-  //"events": [
-  //  {
-  //    "event_id": 55098,
-  //    "img": "events\/1.png",
-  //    "time": "07:00",
-  //    "time_to_sort": 1456722000,
-  //    "expert": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0435\u0432",
-  //    "caption": "\u041d\u0430\u0442\u043e\u0449\u0430\u043a",
-  //    "event_name_id": 8,
-  //    "unscheduled": false,
-  //    "class": 1,
-  //    "items_count": "1",
-  //    "items": [
-  //      {
-  //        "0": "GetEvents",
-  //        "1": "php",
-  //        "id": "1291",
-  //        "name": "\u0412\u043e\u0434\u0430 \u043e\u0447\u0438\u0449\u0435\u043d\u043d\u0430\u044f (300)"
-  //      }
-  //    ],
-  //    "confirmed": 1
-  //  },
-
-    public class Item
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string parametr0 { get; set; }
-        public string parametr1 { get; set; }
-    }
-
-    public class Event
-    {
-        public int event_id { get; set; }
-        public string img { get; set; }
-        public string time { get; set; }
-        public int time_to_sort { get; set; }
-        public string expert { get; set; }
-        public string caption { get; set; }
-        public int event_name_id { get; set; }
-        public bool unscheduled { get; set; }
-        public int @class { get; set; }
-        public string items_count { get; set; }
-        public List<Item> items { get; set; }
-        public int confirmed { get; set; }
-    }
-
-    public class Warning
-    {
-        public int code { get; set; }
-        public string caption { get; set; }
-        public string details { get; set; }
-    }
-
-    //public class Result
-    //{
-    //    public List<object> errors { get; set; }
-    //    public List<Warning> warnings { get; set; }
-    //    public List<object> notifies { get; set; }
-    //}
-
-    public class Messages
-    {
-        public List<object> errors { get; set; }
-        public List<string> warnings { get; set; }
-        public List<object> notifies { get; set; }
-    }
-
-    public class Debug
-    {
-        public string client_id { get; set; }
-        public double runtime { get; set; }
-        public string script { get; set; }
-        public int queries { get; set; }
-        public Messages messages { get; set; }
-        public int responsesize { get; set; }
-    }
-
-    public class RootObject
-    {
-        public int success { get; set; }
-        public string a_day_string { get; set; }
-        public int a_day_date { get; set; }
-        public List<Event> events { get; set; }
-        public int a_day_events_count { get; set; }
-        public bool DevMode { get; set; }
-        public Result result { get; set; }
-        public Debug debug { get; set; }
-    }
     }
 }

@@ -1,0 +1,6 @@
+D:\Proj\Everyday-C-SHARP\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Proj\Everyday-C-SHARP\obj\x86\Release\Everyday.frmLogin.resources
+D:\Proj\Everyday-C-SHARP\obj\x86\Release\Everyday.frmMain.resources
+D:\Proj\Everyday-C-SHARP\obj\x86\Release\Everyday.Properties.Resources.resources
+D:\Proj\Everyday-C-SHARP\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Proj\Everyday-C-SHARP\obj\x86\Release\GenerateResource.write.1.tlog

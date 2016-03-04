@@ -19,10 +19,10 @@ namespace Everyday
             InitializeComponent();
             eday=everyday;
             pbxKlient.Image = eday.UserImg;
-            txtUserInfo.Text = eday.getUserInfo.UserF + "\r\n" + eday.getUserInfo.UserI +
-                               "\r\n" + eday.getUserInfo.UserO + "\r\nДата регистрации: " + eday.getUserInfo.UserDateReg;
+            //txtUserInfo.Text = eday.getUserInfo.UserF + "\r\n" + eday.getUserInfo.UserI +
+            //                   "\r\n" + eday.getUserInfo.UserO + "\r\nДата регистрации: " + eday.getUserInfo.UserDateReg;
 
-            events = eday.GetEventsByData(monthCalendar1.TodayDate.ToString("yyyy-MM-dd"));
+            events = eday.GetEventsByData(monthCalendar1.TodayDate.ToString("yyyy-MM-dd"), monthCalendar1.TodayDate.ToString("yyyy-MM-dd"));
 
             //CreateMyListView();
             FillData(events);
@@ -57,18 +57,19 @@ namespace Everyday
              listView1.Clear();
              listView1.Columns.Add("Мероприятия", 130, HorizontalAlignment.Left);
              listView1.Columns.Add("Продукты", 200, HorizontalAlignment.Left);
-             foreach (Events ev in events.events)
+             foreach (Event ev in events.events)
              {
-                 ListViewItem item = new ListViewItem(ev.caption.ToString(), 0);
+                 ListViewItem item = new ListViewItem(ev.event_name.ToString(), 0);
                  item.Checked = ev.confirmed == 1 ? true : false;
 
                  Bitmap bmp = eday.GetResponse(eday.SERVER_IMG + ev.img, true) as Bitmap;
                  if (bmp != null) imageListSmall.Images.Add(bmp);
                  
                  ListViewItem.ListViewSubItemCollection lvi = new ListViewItem.ListViewSubItemCollection(item);
-                 foreach (Items it in ev.items)
+
+                 foreach (Item it in ev.details.items)
                  {
-                     lvi.Add(it.name);
+                     lvi.Add(it.caption);
                  }
                    
                  listView1.Items.AddRange(new ListViewItem[] { item });
@@ -87,7 +88,7 @@ namespace Everyday
 
          private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
          {
-             events = eday.GetEventsByData(e.Start.ToString("yyyy-MM-dd"));
+             events = eday.GetEventsByData(e.Start.ToString("yyyy-MM-dd"), e.End.ToString("yyyy-MM-dd"));
              FillData(events);
          }
     }

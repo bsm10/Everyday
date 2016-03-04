@@ -25,3 +25,4 @@ D:\Proj\Everyday-C-SHARP\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\Proj\Everyday-C-SHARP\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\Proj\Everyday-C-SHARP\bin\Debug\Everyday-C-SHARP.exe.config
 D:\Proj\Everyday-C-SHARP\bin\Debug\events.sdf
+D:\Proj\Everyday-C-SHARP\bin\Debug\Newtonsoft.Json.dll

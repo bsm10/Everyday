@@ -50,7 +50,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\Net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:\Documents and Settings\Sprava.COMP1\Мои документы\Visual Studio 2010\Net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -71,6 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>eventsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="rGetEvents.cs" />
     <Compile Include="Everyday.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -115,6 +116,7 @@
     <None Include="eventsDataSet.xss">
       <DependentUpon>eventsDataSet.xsd</DependentUpon>
     </None>
+    <None Include="events_rGetEvents.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
