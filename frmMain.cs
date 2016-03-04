@@ -66,12 +66,13 @@ namespace Everyday
                  if (bmp != null) imageListSmall.Images.Add(bmp);
                  
                  ListViewItem.ListViewSubItemCollection lvi = new ListViewItem.ListViewSubItemCollection(item);
-
-                 foreach (Item it in ev.details.items)
+                 if (ev.details != null && ev.details.items != null)
                  {
-                     lvi.Add(it.caption);
-                 }
-                   
+                    foreach (Item it in ev.details.items)
+                    {
+                        lvi.Add(it.caption);
+                    }
+                 }  
                  listView1.Items.AddRange(new ListViewItem[] { item });
              }
              //Initialize the ImageList objects with bitmaps.
