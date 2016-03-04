@@ -116,9 +116,9 @@ namespace Everyday
             loginData = JsonConvert.DeserializeObject<LoginData>(response);
 
             uri = new Uri(SERVER_IOS + "rGetEvents.php?");
+            
             postData = String.Format("Token={0}&Devid={1}&Platform={2}&Query={{\"date_start\":\"{3}\",\"date_end\":\"{4}\"}}",
-                                        loginData.token, "bsm11", "WinXP", "2016-02-20", "2016-02-21");
-
+                                        loginData.token, "bsm11", "WinXP", DateTime.Today.ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"));
             if (MakeQueryToServer(uri, postData) == 0) return 0;
             getEvents = JsonConvert.DeserializeObject<GetEvents>(response);
 
@@ -126,6 +126,7 @@ namespace Everyday
             SUCCESS = 1;
             return 1;
         }
+
         //=================================================================================================
         //=================================================================================================
         public GetEvents GetEventsByData(string date_start, string date_end) //date format "2014-08-20"
@@ -143,7 +144,6 @@ namespace Everyday
         private int MakeQueryToServer(Uri uri, string postData)
         {
             ErrorStatus res;
-            //response = (string)GetResponse(qry);
             response = SendPostRequest(uri, postData);
             res = JsonConvert.DeserializeObject<ErrorStatus>(response) as ErrorStatus;
             if (res.success == 0)
@@ -151,11 +151,11 @@ namespace Everyday
                 MessageBox.Show(res.error_for_user);
                 return 0;
             }
+            SaveDataRequest(response);
             return 1;
         }
 
-
-public string SendPostRequest(Uri uri, string postData)
+        public string SendPostRequest(Uri uri, string postData)
 {
     //Пример параметров
     //Uri uri = new Uri("http://api.go.pl.ua/ios/GetEventDetails.php?");
@@ -168,7 +168,7 @@ public string SendPostRequest(Uri uri, string postData)
     request.Method = "POST";
     byte[] byteArray = Encoding.UTF8.GetBytes(postData);
     request.ContentLength = byteArray.Length;
-    request.ContentType = "text/html"; //"application/x-www-form-urlencoded";
+    request.ContentType = "application/x-www-form-urlencoded";
     try
     {
         Stream dataStream = request.GetRequestStream();
@@ -194,7 +194,7 @@ public string SendPostRequest(Uri uri, string postData)
     
 }
 
-    public object GetResponse(string QueryPHP, bool bBitmap=false) {
+        public object GetResponse(string QueryPHP, bool bBitmap=false) {
         HttpWebRequest request;
         HttpWebResponse response;
         request = (HttpWebRequest)WebRequest.Create(QueryPHP);
@@ -229,7 +229,7 @@ public string SendPostRequest(Uri uri, string postData)
         }
         
     }
-    private string GetDataFromString(string sParametr, string StringResponse)
+        private string GetDataFromString(string sParametr, string StringResponse)
     {
         int i;
         int j;
@@ -243,6 +243,24 @@ public string SendPostRequest(Uri uri, string postData)
         }
         return "NoData";
     }
+        
+        
+        public void SaveDataRequest(string content)
+        {
+            string path_savegame = Application.CommonAppDataPath + @"\data.json";
+            try
+            {
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(path_savegame, true))
+                    {
+                        file.Write(content);
+                    }
+            }
+             catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
 
     }
 }
