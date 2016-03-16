@@ -13,41 +13,18 @@ namespace Everyday
     public partial class frmMain : Form
     {
         GetEvents events;
-        Everyday eday;
-        public frmMain(Everyday everyday)
+        
+        //Everyday eday;
+        public frmMain()
         {
             InitializeComponent();
-            eday=everyday;
-            pbxKlient.Image = eday.UserImg;
-            //txtUserInfo.Text = eday.getUserInfo.UserF + "\r\n" + eday.getUserInfo.UserI +
-            //                   "\r\n" + eday.getUserInfo.UserO + "\r\nДата регистрации: " + eday.getUserInfo.UserDateReg;
 
-            events = eday.GetEventsByData(monthCalendar1.TodayDate.ToString("yyyy-MM-dd"), monthCalendar1.TodayDate.ToString("yyyy-MM-dd"));
-
-            //CreateMyListView();
+            pbxKlient.Image = Everyday.UserImg;
+                        
+            events = Everyday.GetEventsByData(monthCalendar1.TodayDate.ToString("yyyy-MM-dd"), monthCalendar1.TodayDate.ToString("yyyy-MM-dd"));
             FillData(events);
         }
 
-        // private void CreateMyListView()
-        //{
-        //    // Create a new ListView control.
-        //    //listView1.Bounds = new Rectangle(new Point(172, 74), new Size(280, 200));
-        //    // Set the view to show details.
-        //    listView1.View = View.Details;
-        //    // Allow the user to edit item text.
-        //    listView1.LabelEdit = true;
-        //    // Allow the user to rearrange columns.
-        //    listView1.AllowColumnReorder = true;
-        //    // Display check boxes.
-        //    listView1.CheckBoxes = true;
-        //    // Select the item and subitems when selection is made.
-        //    listView1.FullRowSelect = true;
-        //    // Display grid lines.
-        //    listView1.GridLines = true;
-        //    // Sort the items in the list in ascending order.
-        //    //listView1.Sorting = SortOrder.Ascending;
-            
-        //}
 
          private void FillData(GetEvents events)
          {
@@ -62,7 +39,7 @@ namespace Everyday
                  ListViewItem item = new ListViewItem(ev.event_name.ToString(), 0);
                  item.Checked = ev.confirmed == 1 ? true : false;
 
-                 Bitmap bmp = eday.GetResponse(eday.SERVER_IMG + ev.img, true) as Bitmap;
+                 Bitmap bmp = Everyday.GetResponse(Everyday.SERVER_IMG + ev.img, true) as Bitmap;
                  if (bmp != null) imageListSmall.Images.Add(bmp);
                  
                  ListViewItem.ListViewSubItemCollection lvi = new ListViewItem.ListViewSubItemCollection(item);
@@ -85,11 +62,12 @@ namespace Everyday
              //listView1.LargeImageList = imageListLarge;
              //listView1.SmallImageList = imageListSmall;
              listView1.SmallImageList = imageListSmall;
+             
          }
 
          private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
          {
-             events = eday.GetEventsByData(e.Start.ToString("yyyy-MM-dd"), e.End.ToString("yyyy-MM-dd"));
+             events = Everyday.GetEventsByData(e.Start.ToString("yyyy-MM-dd"), e.End.ToString("yyyy-MM-dd"));
              FillData(events);
          }
     }

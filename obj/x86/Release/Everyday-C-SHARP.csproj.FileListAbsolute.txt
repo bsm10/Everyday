@@ -4,3 +4,11 @@ D:\Proj\Everyday-C-SHARP\obj\x86\Release\Everyday.frmMain.resources
 D:\Proj\Everyday-C-SHARP\obj\x86\Release\Everyday.Properties.Resources.resources
 D:\Proj\Everyday-C-SHARP\obj\x86\Release\GenerateResource.read.1.tlog
 D:\Proj\Everyday-C-SHARP\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Proj\Everyday-C-SHARP\bin\Release\Everyday-C-SHARP.exe.config
+D:\Proj\Everyday-C-SHARP\bin\Release\Everyday-C-SHARP.exe
+D:\Proj\Everyday-C-SHARP\bin\Release\Everyday-C-SHARP.pdb
+D:\Proj\Everyday-C-SHARP\bin\Release\Newtonsoft.Json.dll
+D:\Proj\Everyday-C-SHARP\bin\Release\Newtonsoft.Json.pdb
+D:\Proj\Everyday-C-SHARP\bin\Release\Newtonsoft.Json.xml
+D:\Proj\Everyday-C-SHARP\obj\x86\Release\Everyday-C-SHARP.exe
+D:\Proj\Everyday-C-SHARP\obj\x86\Release\Everyday-C-SHARP.pdb

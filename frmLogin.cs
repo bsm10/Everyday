@@ -25,14 +25,15 @@ namespace Everyday
             }
             else
             {
-                Everyday everyday = new Everyday(UsernameTextBox.Text,PasswordTextBox.Text);
+                //Everyday everyday = new Everyday(UsernameTextBox.Text,PasswordTextBox.Text);
+                Everyday.Login(UsernameTextBox.Text, PasswordTextBox.Text);
+                frmMain f = new frmMain();
+                f.Show();
+                this.Hide();
 
-                if (everyday.SUCCESS == 1)
-                {
-                    frmMain f = new frmMain(everyday);
-                    f.Show();
-                    this.Hide();
-                }
+                //if (everyday.SUCCESS == 1)
+                //{
+                //}
             }
 
         }

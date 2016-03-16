@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pbxKlient = new System.Windows.Forms.PictureBox();
             this.txtUserInfo = new System.Windows.Forms.TextBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.getEventsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eventBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxKlient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getEventsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pbxKlient
@@ -48,7 +53,7 @@
             // 
             this.txtUserInfo.BackColor = System.Drawing.SystemColors.Control;
             this.txtUserInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserInfo.Location = new System.Drawing.Point(86, 3);
+            this.txtUserInfo.Location = new System.Drawing.Point(77, 1);
             this.txtUserInfo.Multiline = true;
             this.txtUserInfo.Name = "txtUserInfo";
             this.txtUserInfo.ReadOnly = true;
@@ -67,6 +72,7 @@
             this.listView1.AllowColumnReorder = true;
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView1.CheckBoxes = true;
+            this.listView1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.eventBindingSource, "expert_name", true));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.LabelEdit = true;
@@ -76,6 +82,10 @@
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // eventBindingSource
+            // 
+            this.eventBindingSource.DataSource = typeof(Everyday.Event);
             // 
             // frmMain
             // 
@@ -89,6 +99,8 @@
             this.Name = "frmMain";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbxKlient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getEventsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,6 +112,8 @@
         private System.Windows.Forms.TextBox txtUserInfo;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.BindingSource getEventsBindingSource;
+        private System.Windows.Forms.BindingSource eventBindingSource;
     }
 }
 

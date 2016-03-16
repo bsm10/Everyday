@@ -66,11 +66,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="eventsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>eventsDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="rGetEvents.cs" />
     <Compile Include="Everyday.cs" />
     <Compile Include="frmLogin.cs">
@@ -104,19 +99,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
-    <None Include="events.json" />
-    <None Include="eventsDataSet.xsc">
-      <DependentUpon>eventsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="eventsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>eventsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="eventsDataSet.xss">
-      <DependentUpon>eventsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="events_rGetEvents.json" />
+    <Content Include="events.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,11 +109,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="events.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />

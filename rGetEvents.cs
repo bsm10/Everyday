@@ -25,6 +25,10 @@ namespace Everyday
         public object rest { get; set; }
         public object exercises_count { get; set; }
         public string caption { get; set; }
+        public override string ToString()
+        {
+            return caption;
+        }
     }
 
     public class Performer
@@ -41,6 +45,12 @@ namespace Everyday
 
     public class Details
     {
+//белки
+//жиры
+//углеводы
+//клетчатка
+//килокаллории
+
         public string proteins { get; set; }
         public string fats { get; set; }
         public string carbs { get; set; }
